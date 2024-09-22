@@ -7209,6 +7209,11 @@ input, select, textarea {
 	.gallery article .image {
 		background-color: rgba(0, 0, 0, 0.125);
 	}
+	.gallery .image img {
+	    width: 150px;  /* Set your preferred width */
+	    height: 150px; /* Set your preferred height */
+	    object-fit: cover; /* Ensures the image is cropped to fit the size while keeping aspect ratio */
+	}
 
 /* Wrapper (style1) */
 
