@@ -151,11 +151,16 @@ input, select, textarea {
 
 		}
 
-	body {
+	/* body {
 		background-color: #ffffff;
 		color: #000000;
+	} */
+	body {
+		background-color: #ffffff; /* Black background */
+		color: #000000; /* Optional: Set text color to white for contrast */
 	}
 
+	
 	body, input, select, textarea {
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 1rem;
@@ -196,10 +201,11 @@ input, select, textarea {
 		line-height: 1.375;
 		letter-spacing: -0.05em;
 		margin: 0 0 1rem 0;
+		color: #000000 !important; /* Force the color to be white */
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-			color: inherit;
+			color: black !important; /* Ensure link color is white */
 			text-decoration: none;
 		}
 
