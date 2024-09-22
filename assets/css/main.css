@@ -7211,7 +7211,7 @@ input, select, textarea {
 	}
 	.gallery .image img {
 	    width: 150px;  /* Set your preferred width */
-	    height: 150px; /* Set your preferred height */
+	    height: 350px; /* Set your preferred height */
 	    object-fit: cover; /* Ensures the image is cropped to fit the size while keeping aspect ratio */
 	}
 
