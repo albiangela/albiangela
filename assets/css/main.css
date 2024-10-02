@@ -8612,3 +8612,16 @@ input, select, textarea {
 			#wrapper.divided > .invert:first-child {
 				box-shadow: none !important;
 			}
+
+			
+			#menu {
+				position: fixed;
+				top: 20px;
+				right: 20px;
+				background-color: #000000;
+				color: white;
+				padding: 0px;
+				border-radius: 5px;
+				z-index: 1000;
+			}
+			

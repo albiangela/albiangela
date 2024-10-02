@@ -5,6 +5,41 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
+	<!-- Scrolldown menu -->
+    <head>
+        <title>Scroll Down Menu</title>
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+            #menu {
+                position: fixed;
+                top: 10px;
+                right: 10px;
+                background-color: #333;
+                color: white;
+                padding: 10px;
+                z-index: 1000;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- Scroll Down Menu -->
+        <nav id="menu">
+            <select onchange="location = this.value;">
+                <option value="#">Menu</option>
+                <option value="#wrapper">Bio</option>
+                <option value="#predator-prey">Predator-prey</option>
+                <!-- Add more sections here -->
+            </select>
+        </nav>
+
+    </body>
+
+
 	<head>
 		<title>ANGELA ALBI</title>
 		<meta charset="utf-8" />
@@ -18,16 +53,17 @@
 			<div id="wrapper" class="divided">
 
 				<!-- One -->
-				<section class="banner style4 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
-					<div class="content">
-						<h1>Angela Albi</h1>
-						<p class="major">I am a post-doctoral researcher interested in fundamental principles of how and why animals move together and how their interactions shape their group behaviour.</p>
+				<section class="banner style5 orient-left content-align-left image-position-right fullscreen onscroll-content-fade-up">
+					<div class="content"  style="position: absolute; top: 25%; left: 5%">
+						<h1 style="color: white;"><strong>Angela Albi</strong></h1>
+						<p class="major"><strong>I am a post-doctoral researcher interested in fundamental principles of how and why animals move together and how their interactions shape their group behaviour.</strong></p>
 						<ul class="actions stacked">
-							<li><a href="#first" class="button big wide smooth-scroll-middle">Get Started</a></li>
+							<li><a href="bio.html" class="button" style="color: white;">Bio</a></li>
 						</ul>
 					</div>
-					<div class="image" style="transform: translateX(10%);">
+					<div class="image" style="width: 110%; opacity: 0.9;">
 						<img src="images/shark_front_angela.jpg" alt="" />
+
 					</div>
 				</section>
 				
@@ -92,7 +128,7 @@
 					</div>
 				</section> -->
 
-				<section class="spotlight style4 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first" style="display: flex; align-items: center;">
+				<!-- <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first" style="display: flex; align-items: center;">
 					<div class="content" style="flex: 1; padding-right: 20px;">
 						<h2>Predator-prey interactions in the field</h2>
 						<p>In the shallow waters of the Maldives, young blacktip reef sharks aggregate and circle within large schools of baitfish. Advances in tracking technology allow us to study predator-prey interactions in their natural environment, quantifying both the sharks' hunting strategies and the prey’s escape behaviors. These young sharks may not only be hunting but also using the shallow waters as a means to avoid larger predators, much like the baitfish do. </p>
@@ -100,14 +136,43 @@
 							<li><a href="#" class="button">Learn More</a></li>
 						</ul>
 					</div>
-					<div class="image" style="flex: 1; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; overflow: hidden;">
-						<video autoplay muted loop style="width: 100%; height: 100%; object-fit: contain;">
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in"></section>
+					<video autoplay muted loop style="width: 100%; height: 100%; object-fit: contain;">
 							<source src="images/sharks_collectionhd_trime.mp4" type="video/mp4">
 							Your browser does not support the video tag.
 						</video>
 					</div>
-				</section>
+				</section> -->
 
+				<!-- <section class="spotlight style5 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+					<div class="content">
+						<h2>Spotlight</h2>
+						<p>This is a <strong>Spotlight</strong> element, and it's generally used &ndash; as its name implies &ndash; to spotlight a particular feature, subject, or pretty much whatever. You can customize its <span class="demo-controls">appearance with a number of modifiers</span>, as well as assign it an optional <code>onload</code> or <code>onscroll</code> transition modifier (<a href="#reference-spotlight">details</a>).</p>
+						<ul class="actions stacked">
+							<li><a href="#" class="button">Learn More</a></li>
+						</ul>
+					</div>
+					<div class="video">
+						<video autoplay muted loop style="width: 100%; height: auto">
+						<source src="images/sharks_collectionhd_trime.mp4" type="video/mp4">
+					</div>
+				</section> -->
+
+				<section id="predator-prey" class="spotlight style5 orient-right content-align-left image-position-center onscroll-image-fade-in" style="position: relative;">
+					<div class="video" style="flex: 1; max-width: 100%; height: auto; display: flex; justify-content: center; align-items: center; position: relative;">
+						<video autoplay muted loop style="width: auto; height: auto; object-fit: contain;">
+							<source src="images/sharks_collectionhd_trime.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+						<div class="content" style="position: absolute; top: 70%; left: 20%; transform: translate(-40%, -50%); text-align: left; color: white; background: rgba(255, 255, 255, 0); padding: 20px;">
+							<h2>Predator-prey interactions in the field</h2>
+							<p>In the shallow waters of the Maldives, young blacktip reef sharks circle within large schools of baitfish. We use drones and quantitative analysis to study their behavior.</p>
+							<ul class="actions stacked">
+								<li><a href="learnmore_sharks.html" class="button" style="color: white;">Learn More</a></li>
+							</ul>
+						</div>
+					</div>
+				</section>
 				<!-- Three -->
 				<!-- <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
 					<div class="content">
@@ -140,8 +205,8 @@
 					</div>
 				</section> -->
 				<!-- Four change position text and video  -->
-				<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
-					<div class="image" style="flex: 1; max-width: 40%; height: auto; display: flex; justify-content: center; align-items: center;">
+				<section id="guppies" class="spotlight style1 orient-left content-align-right image-position-center onscroll-image-fade-in">
+					<div class="image" style="flex: 1; max-width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
 						<video autoplay muted loop style="width: 110%; height: auto; object-fit: contain;">
 							<source src="images/Animation_example_guppies.mp4" type="video/mp4">
 							Your browser does not support the video tag.
@@ -149,7 +214,7 @@
 					</div>
 					<div class="content" style="flex: 1; padding-left: 20px;">
 						<h2>Individual and collective behaviour of guppies</h2>
-						<p>During my PhD I looked at the effects of parasites on both fish shoals and individual-level kinematics. I used computer vision and machine learning for video processing and analysis.</p>
+						<p>During my PhD I looked at the effects of parasites on both fish shoaling behavior and individual-level kinematics. </p>
 						<ul class="actions stacked">
 							<li><a href="#" class="button">Learn More</a></li>
 						</ul>
@@ -157,7 +222,7 @@
 				</section>
 
 				<!-- Five -->
-					<section class="wrapper style1 align-center">
+					<section id="gallery" class="wrapper style1 align-center">
 						<div class="inner">
 							<h2>Photo gallery</h2>
 							<!-- <p>Without a camera I feel lost.</p> -->
@@ -313,10 +378,10 @@
 
 					</section>
 
-				<!-- Six
-					<section class="wrapper style1 align-center">
+				<!-- Six -->
+					<!-- <section class="wrapper style1 align-center">
 						<div class="inner">
-							<h2>Ipsum sed consequat</h2>
+							<h2>More content</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum.</p>
 							<div class="items style1 medium onscroll-fade-in">
 								<section>
@@ -381,7 +446,7 @@
 								</section>
 							</div>
 						</div>
-					</section> -->
+					</section> --> 
 
 				<!-- Seven -->
 					<section class="wrapper style1 align-center">
@@ -415,12 +480,12 @@
 						<div class="inner">
 							<ul class="icons">
 								<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<!-- <li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li> -->
 								<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
 								<li><a href="#" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 								<li><a href="#" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
 							</ul>
-							<p>&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+							<p>&copy; Angela Albi. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 						</div>
 					</footer>
 
