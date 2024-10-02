@@ -18,11 +18,34 @@
                 top: 10px;
                 right: 10px;
                 background-color: #333;
+				/* background-color: rgba(0, 0, 0, 0.4); */
                 color: white;
                 padding: 10px;
                 z-index: 1000;
                 border-radius: 5px;
             }
+			/* Style for the individual menu items (links) */
+			#menu ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+			#menu ul li {
+				margin: 10px 0;
+			}
+			#menu ul li a {
+				color: white; /* Font color */
+				text-decoration: none;
+				display: block;
+				padding: 10px 20px; /* Padding for clickable area */
+				background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent button */
+				border-radius: 5px;
+				transition: background-color 0.3s ease;
+			}
+			/* Hover effect for links */
+			#menu ul li a:hover {
+				background-color: rgba(255, 255, 255, 0.3); /* Slightly darker background on hover */
+			}
         </style>
     </head>
     <body>
@@ -39,6 +62,7 @@
 				<!-- Add more sections here -->
             </select>
         </nav>
+
 
     </body>
 
@@ -61,7 +85,7 @@
 						<h1 style="color: white;"><strong>Angela Albi</strong></h1>
 						<p class="major"><strong>I am a post-doctoral researcher interested in fundamental principles of how and why animals move together and how their interactions shape their group behaviour.</strong></p>
 						<ul class="actions stacked">
-							<li><a href="bio.html" class="button" style="color: rgb(0, 0, 0); background-color: rgba(215, 196, 196, 0.4);">Bio</a></li>
+							<li><a href="bio.html" class="button" style="color: rgb(0, 0, 0); background-color: rgba(79, 79, 79, 0.4);">Bio</a></li>
 						</ul>
 					</div>
 					<div class="image" style="width: 110%; opacity: 0.9;">
@@ -171,7 +195,7 @@
 							<h2>Predator-prey interactions in the field</h2>
 							<p>In the shallow waters of the Maldives, young blacktip reef sharks circle within large schools of baitfish. We use drones and quantitative analysis to study their behavior.</p>
 							<ul class="actions stacked">
-								<li><a href="learnmore_sharks.html" class="button" style="color: rgb(0, 0, 0); background-color: rgba(181, 183, 196, 0.4);">Learn More</a></li>
+								<li><a href="learnmore_sharks.html" class="button" style="color: rgb(0, 0, 0); background-color: rgba(0, 0, 0, 0.4);">Learn More</a></li>
 							</ul>
 						</div>
 					</div>
