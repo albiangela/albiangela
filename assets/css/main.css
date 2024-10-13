@@ -8612,38 +8612,108 @@ input, select, textarea {
 			#wrapper.divided > .invert:first-child {
 				box-shadow: none !important;
 			}
+/* General body and header styling */
+/* body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
 
-			
-#menu {
+header {
+    background-color: #333;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00c6ff;
+} */
+
+body {
+	font-family: "Lato", sans-serif;
+  }
+  
+  .sidebar {
+	height: 100%;
+	width: 85px;
 	position: fixed;
-	top: 20px;
-	right: 20px;
-	/* background-color: #000000; */
-	background-color: rgba(0, 0, 0, 0.4);
-	color: white;
-	padding: 0px;
-	border-radius: 5px;
-	z-index: 1000;
-}
-/* Style for the individual menu items (links) */
-#menu ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-#menu ul li {
-	margin: 10px 0;
-}
-#menu ul li a {
-	color: white; /* Font color */
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #111;
+	transition: 0.5s;
+	overflow-x: hidden;
+	padding-top: 60px;
+	white-space: nowrap;
+  }
+  
+  .sidebar a {
+	padding: 8px 8px 8px 32px;
 	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
 	display: block;
-	padding: 10px 20px; /* Padding for clickable area */
-	background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent button */
-	border-radius: 5px;
-	transition: background-color 0.3s ease;
-}
-/* Hover effect for links */
-#menu ul li a:hover {
-	background-color: rgba(255, 255, 255, 0.3); /* Slightly darker background on hover */
-}
+  }
+  
+  .sidebar a:hover {
+	color: #f1f1f1;
+  }
+  
+  .material-icons,
+  .icon-text {
+	vertical-align: middle;
+  }
+  
+  .material-icons {
+	padding-bottom: 3px;
+	margin-right: 30px;
+  }
+  
+  #main {
+	padding: 16px;
+	margin-left: 85px;
+	transition: margin-left 0.5s;
+  }
+  
+  @media screen and (max-height: 450px) {
+	.sidebar {
+	  padding-top: 15px;
+	}
+	.sidebar a {
+	  font-size: 18px;
+	}
+  }
+			
