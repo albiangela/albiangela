@@ -8665,6 +8665,7 @@ nav {
 body {
 	font-family: "Lato", sans-serif;
   }
+
   
   .sidebar {
 	height: 100%;
@@ -8716,4 +8717,36 @@ body {
 	  font-size: 18px;
 	}
   }
-			
+
+.content {
+    margin-left: 85px; /* Sidebar's initial width */
+    transition: margin-left 0.5s; /* Smooth transition when sidebar expands */
+    /* Other styles */
+}
+
+.content {
+    margin-left: 5px; /* Sidebar's initial width */
+    transition: margin-left 0.5s; /* Smooth transition when sidebar expands */
+    /* Other styles */
+}
+
+.container {
+    display: flex;
+}
+.sidebar {
+    width: 85px;
+    position: fixed;
+    transition: width 0.5s;
+    /* Other styles */
+}
+.sidebar:hover {
+    width: 250px; /* Expanded width */
+}
+.divided {
+    margin-left: 85px;
+    transition: margin-left 0.5s;
+    /* Other styles */
+}
+.sidebar:hover + .divided {
+    margin-left: 250px; /* Adjust margin when sidebar expands */
+}
