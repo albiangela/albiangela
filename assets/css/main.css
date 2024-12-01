@@ -8746,3 +8746,37 @@ body {
 .sidebar:hover + .divided {
     margin-left: 250px; /* Adjust margin when sidebar expands */
 }
+
+
+
+/* of the naming on the gallery thumbnails */
+.thumbnail-container {
+    position: relative;
+    display: inline-block;
+}
+
+.thumbnail-container .image img {
+    display: block;
+    width: 100%;
+}
+
+.thumbnail-container .caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+    color: white; /* Default text color */
+    /* font-size: 10rem; Adjust font size as needed */
+    pointer-events: none; /* Text remains non-interactive */
+    /* transition: color 0.3s ease; Smooth transition for color change */
+}
+
+.thumbnail-container .caption {
+    font-size: 1.7rem !important;; /* Adjust font size */
+    color: white; /* Default color */
+    transition: color 0.3s ease;
+}
+
+.thumbnail-container .image:hover .caption {
+    color: #ffffff; /* New text color on hover (e.g., blue) */
+}
