@@ -17,6 +17,14 @@ with open(output_file, "w") as html_file:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aerial</title>
     <link rel="stylesheet" href="assets/css/main.css">
+    <script>
+        // Disable right-click on all images
+        document.addEventListener("contextmenu", function (e) {
+            if (e.target.tagName === "IMG") {
+                e.preventDefault(); // Prevent the default context menu
+            }
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -40,7 +48,7 @@ with open(output_file, "w") as html_file:
             # Add HTML for each photo
             html_file.write(f"""
                     <article>
-                        <a href="{full_image_path}" class="image">
+                        <a href="{full_image_path}" class="image" data-lightbox="gallery" data-lightbox-options='{{"disableDownload": true}}'>
                             <img src="{thumb_image_path}" alt="Photo">
                         </a>
                     </article>\n""")
