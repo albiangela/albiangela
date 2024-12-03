@@ -8826,7 +8826,25 @@ body {
     }
 }
 
+/* see more */
+/* Styles for the gallery section */
+#gallery .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Spacing between elements */
+}
 
+#gallery a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #003a77;
+    transition: color 0.3s;
+}
+
+#gallery a:hover {
+    color: #005bb5; /* Slightly lighter blue for hover effect */
+}
 .thumbnail-container {
     position: relative;
     display: inline-block;
