@@ -8788,34 +8788,40 @@ body {
     }
 }
 /* more-photos.html */
-/* Responsive Grid for more-photos.html */
-/* Responsive Grid for Gallery Thumbnails */
-.gallery.style2.medium {
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(2, 1fr); /* 2 equal-width columns */
-    gap: 10px; /* Space between grid items */
-    margin: 0 auto; /* Center the gallery horizontally */
-    padding: 0; /* Remove unnecessary padding around the gallery */
-}
-
-.gallery.style2.medium .thumbnail-container {
+.gallery.style2.medium.lightbox.onscroll-fade-in {
     display: flex;
-    flex-direction: column; /* Stack image and caption */
-    align-items: center; /* Center-align content */
-    justify-content: center;
-    text-align: center;
-    padding: 0; /* Remove extra padding */
-    margin: 0; /* Reset margins */
+    flex-wrap: wrap; /* Allow thumbnails to wrap to new rows */
+    gap: 20px; /* Space between thumbnails */
+    justify-content: center; /* Center-align items */
+    padding: 20px;
 }
 
-.gallery.style2.medium img {
-    width: 300px; /* Set uniform width for all previews */
-    height: 300px; /* Set uniform height for all previews */
-    object-fit: cover; /* Ensure the image fills the space proportionally */
-    border: none; /* Remove borders */
-    box-shadow: none; /* Ensure no shadows */
-    margin: 0; /* Reset margins */
-    background: none; /* Ensure no background color */
+.gallery.style2.medium.lightbox.onscroll-fade-in article {
+    width: 300px; /* Set a consistent width for thumbnails */
+    text-align: center; /* Center-align captions */
+}
+
+.gallery.style2.medium.lightbox.onscroll-fade-in img {
+    width: 100%; /* Make thumbnails fill their container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.gallery.style2.medium.lightbox.onscroll-fade-in article:hover img {
+    transform: scale(1.05); /* Zoom in slightly on hover */
+}
+
+.gallery.style2.medium.lightbox.onscroll-fade-in .caption {
+    margin-top: 10px;
+    font-size: 0.8rem; /* Smaller font size for captions */
+    color: #ffffff;
+}
+
+.gallery.style2.medium.lightbox.onscroll-fade-in article:hover .caption {
+    color: #fffcfc; /* Ensure no color change on hover */
+    transition: none; /* Remove transition effects for captions */
+	font-size: 0.7rem;
 }
 
 /* Responsive Design for Smaller Screens */
@@ -8823,6 +8829,36 @@ body {
     .gallery.style2.medium {
         grid-template-columns: repeat(1, 1fr); /* Switch to 1 column for smaller screens */
     }
+}
+/* Gallery for more-photos.html */
+.gallery {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(3, 1fr); /* Explicitly set 3 equal-width columns */
+    gap: 20px; /* Space between grid items */
+    margin: 0 auto; /* Center the gallery horizontally */
+    padding: 20px; /* Optional padding around the gallery */
+}
+
+.gallery article {
+    text-align: center; /* Center-align captions */
+}
+
+.gallery img {
+    width: 100%; /* Ensure images fit their grid container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional rounded corners */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.gallery article:hover img {
+    transform: scale(1.05); /* Zoom in slightly on hover */
+}
+
+.gallery .caption {
+    margin-top: 10px;
+    font-size: 0.8rem; /* Smaller font size for captions */
+    color: #555;
+    text-align: center; /* Center-align text */
 }
 
 /* see more */
@@ -8844,68 +8880,94 @@ body {
     color: #458bd2; /* Slightly lighter blue for hover effect */
 }
 
-
-/* Gallery Horizontal Scroll with Overlaid Captions */
-.gallery.style2.medium.lightbox.onscroll-fade-in {
-    display: flex; /* Use flexbox for horizontal scrolling */
-    gap: 20px; /* Space between thumbnails */
-    overflow-x: auto; /* Allow horizontal scrolling */
-    padding: 20px; /* Add padding around the gallery */
-    scroll-behavior: smooth; /* Optional: Smooth scrolling */
-}
-
-.gallery.style2.medium.lightbox.onscroll-fade-in article {
-    position: relative; /* Required for overlay positioning */
-    flex: 0 0 auto; /* Prevent shrinking and ensure items stay in a row */
-    width: 200px; /* Set fixed width for thumbnails */
-    text-align: center; /* Center-align captions */
-    height: 150px; /* Ensure consistent height for all items */
-}
-
-.gallery.style2.medium.lightbox.onscroll-fade-in .image img {
-    width: 100%; /* Make images fill their container */
-    height: 100%; /* Maintain aspect ratio and fit container */
-    object-fit: cover; /* Ensure the image fits perfectly inside its box */
-    border-radius: 5px; /* Optional: Add rounded corners */
-}
-
+/* Captions */
 .gallery.style2.medium.lightbox.onscroll-fade-in .caption {
     position: absolute; /* Overlay the text on the image */
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust for perfect centering */
-    color: white; /* Text color for visibility */
-    font-size: 0.5rem; /* Adjust font size for captions */
+    transform: translate(-50%, -50%); /* Perfect centering */
+    color: white !important; /* Force white text color */
+    font-size: 0.6rem; /* Smaller font size */
     font-weight: bold; /* Make the text stand out */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
-    z-index: 2; /* Ensure the text stays above the image */
-    pointer-events: none; /* Prevent text from blocking clicks on the image */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle shadow for readability */
+    z-index: 2; /* Ensure it is above the image */
+    pointer-events: none; /* Prevent blocking clicks */
+    transition: none; /* Disable transitions on color */
 }
 
-.gallery.style2.medium.lightbox.onscroll-fade-in article:hover .image img {
-    filter: brightness(70%); /* Dim the image slightly on hover for emphasis */
-    transition: filter 0.3s ease; /* Smooth transition */
+/* Hover Behavior */
+.gallery.style2.medium.lightbox.onscroll-fade-in article:hover .caption {
+    color: white !important; /* Ensure text stays white */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Keep shadow */
 }
 
-.thumbnail-container {
-    position: relative;
-    display: inline-block;
+/* Gallery Container */
+.gallery.style2.medium.lightbox.onscroll-fade-in {
+    display: flex; /* Flexbox for horizontal scrolling */
+    gap: 0px; /* No space between thumbnails */
+    overflow-x: auto; /* Allow scrolling */
+    padding: 0px; /* Remove extra padding */
+    scroll-behavior: smooth; /* Smooth scroll */
+    width: 100vw; /* Full viewport width */
+    box-sizing: border-box; /* Include padding and borders in width */
 }
 
-.thumbnail-container .image img {
-    display: block;
-    width: 100%;
+/* Article Settings */
+.gallery.style2.medium.lightbox.onscroll-fade-in article {
+    position: relative; /* Enable child positioning */
+    flex: 0 0 auto; /* Prevent shrinking */
+    width: 300px; /* Thumbnail width */
+    height: 200px; /* Thumbnail height */
+    text-align: center; /* Align captions */
 }
 
-.thumbnail-container .caption {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    /* transform: translate(-50%, -50%); */
-    color: white; /* Default text color */
-    /* font-size: 10rem; Adjust font size as needed */
-    pointer-events: none; /* Text remains non-interactive */
-    /* transition: color 0.3s ease; Smooth transition for color change */
+/* Image Container */
+.gallery.style2.medium.lightbox.onscroll-fade-in .image {
+    position: relative; /* Enable overlay positioning */
+    width: 100%; /* Fill parent container */
+    height: 100%; /* Match parent height */
+    overflow: hidden; /* Clip overflow */
+}
+
+/* Images */
+.gallery.style2.medium.lightbox.onscroll-fade-in .image img {
+    width: 100%; /* Fill container width */
+    height: 100%; /* Fill container height */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 0px; /* Optional rounded corners */
+}
+
+
+
+/* Gallery in more-photos.html */
+.gallery.style2.medium {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Create 3 equal-width columns */
+    gap: 20px; /* Space between items */
+    margin: 0 auto; /* Center the gallery */
+    padding: 20px; /* Optional padding around the gallery */
+}
+
+.gallery.style2.medium .thumbnail-container {
+    text-align: center; /* Center-align the content */
+}
+
+.gallery.style2.medium .thumbnail-container img {
+    width: 100%; /* Make images fit their container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.gallery.style2.medium .thumbnail-container:hover img {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.gallery.style2.medium .caption {
+    margin-top: 0px;
+    font-size: 0.8rem; /* Smaller font size for captions */
+    color: #555; /* Text color */
+    text-align: center; /* Center-align captions */
 }
 
 .thumbnail-container .caption {
