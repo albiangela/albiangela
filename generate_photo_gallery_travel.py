@@ -1,11 +1,11 @@
 import os
 
 # Define paths to your full-size and thumbnail image directories
-thumbs_folder = "images/gallery/thumbs_nature"
-fulls_folder = "images/gallery/fulls_nature"
+thumbs_folder = "images/gallery/thumbs_travel"
+fulls_folder = "images/gallery/fulls_travel"
 
 # Output HTML file
-output_file = "/Users/ang/Dropbox/Work/sharks/code/htmlsite/gallery_nature_1.html"
+output_file = "/Users/ang/Dropbox/Work/sharks/code/htmlsite/gallery_travel_1.html"
 
 # Open a file to write the HTML content
 with open(output_file, "w") as html_file:
@@ -15,7 +15,7 @@ with open(output_file, "w") as html_file:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nature Photos</title>
+    <title>Travel Photos</title>
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
@@ -24,9 +24,9 @@ with open(output_file, "w") as html_file:
             <a href="index.html">Home</a> | <a href="more-photos.html">Back to Gallery</a>
         </nav>
     </header>
-    <section id="nature-photos" class="wrapper style1 align-center">
+    <section id="travel-photos" class="wrapper style1 align-center">
         <div class="inner">
-            <h2>Nature Photos</h2>
+            <h2>Travel Photos</h2>
             <div class="gallery style2 medium lightbox">
                 <div class="gallery">\n""")
 
