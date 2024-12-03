@@ -1,5 +1,12 @@
 <html>
+
+
 <head>
+	<script>
+		document.addEventListener('contextmenu', function(e) {
+			e.preventDefault();
+		});
+	</script>
 	<title>ANGELA ALBI</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -32,7 +39,7 @@
 			</ul>
 		</div>
 		<div class="image" style="width: 110%; opacity: 0.9;">
-			<img src="images/shark_front_angela.jpg" alt="Angela Albi Shark Image" />
+			<img src="images/shark_front_angela.jpg" alt="Angela Albi Shark Image" oncontextmenu="return false;" />
 		</div>
 	</section>
 </div>
@@ -70,7 +77,7 @@ function toggleSidebar() {
 
 <section id="predator-prey" class="spotlight style5 orient-right content-align-left image-position-center onscroll-image-fade-in" style="position: relative;">
 <div class="video" style="flex: 1; max-width: 100%; height: auto; display: flex; justify-content: center; align-items: center; position: relative;">
-	<video autoplay muted loop style="width: auto; height: auto; object-fit: contain;">
+	<video controls controlsList="nodownload"> autoplay muted loop style="width: auto; height: auto; object-fit: contain;">
 		<source src="images/sharks_collectionhd_trime.mp4" type="video/mp4">
 		Your browser does not support the video tag.
 	</video>
@@ -87,7 +94,7 @@ function toggleSidebar() {
 				<!-- Four change position text and video  -->
 				<section id="guppies" class="spotlight style1 orient-left content-align-right image-position-center onscroll-image-fade-in">
 					<div class="image" style="flex: 1; max-width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
-						<video autoplay muted loop style="width: 110%; height: auto; object-fit: contain;">
+						<video controls controlsList="nodownload"> autoplay muted loop style="width: 110%; height: auto; object-fit: contain;">
 							<source src="images/Animation_example_guppies.mp4" type="video/mp4">
 							Your browser does not support the video tag.
 						</video>

@@ -8739,7 +8739,7 @@ body {
     width: 250px; /* Expanded width */
 }
 .divided {
-    margin-left: 85px;
+    margin-left: 45px;
     transition: margin-left 0.5s;
     /* Other styles */
 }
@@ -8779,4 +8779,12 @@ body {
 
 .thumbnail-container .image:hover .caption {
     color: #ffffff; /* New text color on hover (e.g., blue) */
+}
+
+
+/* Protect files on website */
+.banner {
+    background-image: url('images/shark_front_angela.jpg');
+    background-size: cover;
+    background-position: center;
 }
