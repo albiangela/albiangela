@@ -8987,3 +8987,15 @@ body {
     background-size: cover;
     background-position: center;
 }
+
+img {
+    -webkit-user-select: none; /* Disable selection in Webkit browsers */
+    -moz-user-select: none; /* Disable selection in Mozilla browsers */
+    -ms-user-select: none; /* Disable selection in Internet Explorer/Edge */
+    user-select: none; /* Disable selection in other browsers */
+    pointer-events: none; /* Disable all pointer interactions */
+}
+
+.gallery img {
+    pointer-events: none; /* Disable right-click on gallery images */
+}
