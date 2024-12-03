@@ -8769,6 +8769,7 @@ a:hover {
     margin-left: 70px; /* Adjust to match the width of your expanded sidebar */
     transition: margin-left 0.5s ease; /* Smooth transition if sidebar width changes */
 }
+
 .thumbnail-container {
     position: relative;
     display: inline-block;
