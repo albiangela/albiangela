@@ -6365,11 +6365,11 @@ input, select, textarea {
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
-		display: flex;
+		display: grid;
 		-moz-flex-wrap: wrap;
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
-		flex-wrap: wrap;
+		flex-wrap: inherit;
 		-moz-justify-content: center;
 		-webkit-justify-content: center;
 		-ms-justify-content: center;
@@ -8728,11 +8728,6 @@ body {
     color: #ffffff; /* Ensure text is readable */
 }
 
-/* Button gallery */
-
-a:hover {
-    color: #0056b3; /* Slightly darker blue */
-}
 
 
 .content {
@@ -8741,9 +8736,9 @@ a:hover {
     /* Other styles */
 }
 
-.container {
+/* .container {
     display: flex;
-}
+} */
 .sidebar {
     width: 85px;
     position: fixed;
@@ -8765,10 +8760,76 @@ a:hover {
 
 
 /* of the naming on the gallery thumbnails */
+/* Adjusted Gallery Styles to Remove Gray Bar */
 .gallery {
-    margin-left: 70px; /* Adjust to match the width of your expanded sidebar */
-    transition: margin-left 0.5s ease; /* Smooth transition if sidebar width changes */
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal-width columns */
+    gap: 20px; /* Space between items */
+    padding: 0; /* Remove padding around the gallery container */
 }
+
+.gallery img {
+    width: 100%; /* Ensure images fit their grid container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: none; /* Ensure the image scales properly */
+    margin: 0; /* Reset margins */
+    background: none; /* Ensure no background is applied */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr; /* Switch to 1 column */
+    }
+}
+/* more-photos.html */
+/* Responsive Grid for more-photos.html */
+/* Responsive Grid for more-photos.html */
+.gallery.style2.medium {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr); /* 2 equal-width columns */
+    gap: 20px; /* Space between grid items */
+    margin: 0 auto; /* Center the gallery horizontally */
+    padding: 0; /* Remove unnecessary padding around the gallery */
+    background: none; /* Ensure no background color on the gallery container */
+    border: none; /* Remove any borders */
+}
+
+.gallery.style2.medium .thumbnail-container {
+    display: flex;
+    flex-direction: column; /* Ensure images and captions align properly */
+    align-items: center; /* Center-align thumbnails */
+    justify-content: center;
+    text-align: center; /* Center-align captions */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+    background: none; /* Remove background color */
+    border: none; /* Remove borders */
+}
+
+.gallery.style2.medium img {
+    width: 100%; /* Fit image to its grid container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: none; /* Ensure images don't shrink */
+    margin: 0; /* Remove extra margin around images */
+    border: none; /* Remove borders */
+    box-shadow: none; /* Ensure no shadows */
+    background: none; /* Remove any background color */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .gallery.style2.medium {
+        grid-template-columns: 1fr; /* Switch to 1 column for smaller screens */
+    }
+}
+
 
 .thumbnail-container {
     position: relative;
