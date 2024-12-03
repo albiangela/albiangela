@@ -8724,14 +8724,13 @@ body {
     position: absolute; /* Positioning relative to the parent container */
     top: 20%; /* Adjust vertical placement */
     left: 5%; /* Adjust horizontal placement */
-    padding: 20px; /* Optional padding for spacing */
     color: #ffffff; /* Ensure text is readable */
 }
 
 
 
 .content {
-    margin-left: 20px; /* Sidebar's initial width */
+    margin-left: 90px; /* Sidebar's initial width */
     transition: margin-left 0.5s; /* Smooth transition when sidebar expands */
     /* Other styles */
 }
