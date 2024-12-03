@@ -8832,7 +8832,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px; /* Spacing between elements */
 }
 
 #gallery a {
@@ -8843,7 +8842,7 @@ body {
 }
 
 #gallery a:hover {
-    color: #005bb5; /* Slightly lighter blue for hover effect */
+    color: #458bd2; /* Slightly lighter blue for hover effect */
 }
 .thumbnail-container {
     position: relative;
