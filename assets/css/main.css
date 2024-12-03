@@ -8731,7 +8731,7 @@ body {
 
 
 .content {
-    margin-left: 5px; /* Sidebar's initial width */
+    margin-left: 20px; /* Sidebar's initial width */
     transition: margin-left 0.5s; /* Smooth transition when sidebar expands */
     /* Other styles */
 }
@@ -8740,7 +8740,7 @@ body {
     display: flex;
 } */
 .sidebar {
-    width: 85px;
+    width: 75px;
     position: fixed;
     transition: width 0.5s;
     /* Other styles */
@@ -8826,7 +8826,24 @@ body {
     }
 }
 
+/* see more */
+/* Styles for the gallery section */
+#gallery .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+#gallery a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #003a77;
+    transition: color 0.3s;
+}
+
+#gallery a:hover {
+    color: #458bd2; /* Slightly lighter blue for hover effect */
+}
 .thumbnail-container {
     position: relative;
     display: inline-block;
