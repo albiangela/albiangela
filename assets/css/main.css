@@ -8720,7 +8720,6 @@ body {
 
 /* position text top banner */
 
-
 #bio .content {
     position: absolute; /* Positioning relative to the parent container */
     top: 20%; /* Adjust vertical placement */
@@ -8728,6 +8727,13 @@ body {
     padding: 20px; /* Optional padding for spacing */
     color: #ffffff; /* Ensure text is readable */
 }
+
+/* Button gallery */
+
+a:hover {
+    color: #0056b3; /* Slightly darker blue */
+}
+
 
 .content {
     margin-left: 5px; /* Sidebar's initial width */
@@ -8759,6 +8765,10 @@ body {
 
 
 /* of the naming on the gallery thumbnails */
+.gallery {
+    margin-left: 70px; /* Adjust to match the width of your expanded sidebar */
+    transition: margin-left 0.5s ease; /* Smooth transition if sidebar width changes */
+}
 .thumbnail-container {
     position: relative;
     display: inline-block;
