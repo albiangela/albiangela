@@ -351,7 +351,7 @@ function toggleSidebar() {
 					<section id = "contact" class="wrapper style1 align-center">
 						<div class="inner medium">
 							<h2>Get in touch</h2>
-							<form method="POST" action="https://formsubmit.co/albi.angela@gmail.com">								<div class="fields">
+							<!-- <form method="POSTg" action="https://formsubmit.co/albi.angela@gmail.com">								<div class="fields">
 									<div class="field half">
 										<label for="name">Name</label>
 										<input type="text" name="name" id="name" value="" />
@@ -368,8 +368,14 @@ function toggleSidebar() {
 								<ul class="actions special">
 									<li><input type="submit" name="submit" id="submit" value="Send Message" /></li>
 								</ul>
-							</form>
-
+							</form> -->
+							<form action="https://formsubmit.co/albi.angela@gmail.com" method="POST">
+								<input type="text" name="name" required>
+								<input type="email" name="email" required>
+								<button type="submit">Send</button>
+						   </form>
+						   
+						   
 						</div>
 					</section>
 
