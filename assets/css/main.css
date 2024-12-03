@@ -8719,9 +8719,8 @@ body {
   }
 
 
-
 .content {
-    margin-left: 85px; /* Sidebar's initial width */
+    margin-left: 5px; /* Sidebar's initial width */
     transition: margin-left 0.5s; /* Smooth transition when sidebar expands */
     /* Other styles */
 }
