@@ -200,7 +200,7 @@ function toggleSidebar() {
 
 
 
-								<!-- </div> -->
+								</div>
 								</section>
 
 								<!-- <article>
@@ -347,34 +347,39 @@ function toggleSidebar() {
 							</div>
 						</div>
 					</section> --> 
-
 				<!-- Seven -->
-					<section id = "contact" class="wrapper style1 align-center">
-						<div class="inner medium">
-							<h2>Get in touch</h2>
-							<!-- <form method="POSTg" action="https://formsubmit.co/albi.angela@gmail.com">								<div class="fields">
-									<div class="field half">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" value="" />
-									</div>
-									<div class="field half">
-										<label for="email">Email</label>
-										<input type="email" name="email" id="email" value="" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="6"></textarea>
-									</div>
+				<section id="contact" class="wrapper style1 align-center">
+					<div class="inner medium">
+						<h2>Get in touch</h2>
+						<form action="https://formsubmit.co/albi.angela@gmail.com" method="POST">
+							<div class="fields">
+								<!-- Name Field -->
+								<div class="field half">
+									<label for="name">Name</label>
+									<input type="text" name="name" id="name" placeholder="Your Name" required>
 								</div>
-								<ul class="actions special">
-									<li><input type="submit" name="submit" id="submit" value="Send Message" /></li>
-								</ul>
-							</form> -->
-							<form action="https://formsubmit.co/albi.angela@gmail.com" method="POST">
-								<input type="text" name="name" required>
-								<input type="email" name="email" required>
-								<button type="submit">Send</button>
-						   </form>
+								<!-- Email Field -->
+								<div class="field half">
+									<label for="email">Email</label>
+									<input type="email" name="email" id="email" placeholder="Your Email" required>
+								</div>
+								<!-- Message Field -->
+								<div class="field">
+									<label for="message">Message</label>
+									<textarea name="message" id="message" rows="6" placeholder="Your Message" required></textarea>
+								</div>
+							</div>
+							<!-- Submit Button -->
+							<ul class="actions special">
+								<li><button type="submit" class="button special">Send Message</button></li>
+							</ul>
+							<!-- Hidden Fields for FormSubmit Settings -->
+							<input type="hidden" name="_subject" value="New Message from Your Website">
+							<input type="hidden" name="_captcha" value="false">
+							<input type="hidden" name="_template" value="table">
+						</form>
+					</div>
+				</section>
 						   
 						   
 						</div>
