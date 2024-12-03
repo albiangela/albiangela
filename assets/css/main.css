@@ -8844,6 +8844,50 @@ body {
 #gallery a:hover {
     color: #458bd2; /* Slightly lighter blue for hover effect */
 }
+
+
+/* Gallery Horizontal Scroll with Overlaid Captions */
+.gallery.style2.medium.lightbox.onscroll-fade-in {
+    display: flex; /* Use flexbox for horizontal scrolling */
+    gap: 20px; /* Space between thumbnails */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    padding: 20px; /* Add padding around the gallery */
+    scroll-behavior: smooth; /* Optional: Smooth scrolling */
+}
+
+.gallery.style2.medium.lightbox.onscroll-fade-in article {
+    position: relative; /* Required for overlay positioning */
+    flex: 0 0 auto; /* Prevent shrinking and ensure items stay in a row */
+    width: 200px; /* Set fixed width for thumbnails */
+    text-align: center; /* Center-align captions */
+    height: 150px; /* Ensure consistent height for all items */
+}
+
+.gallery.style2.medium.lightbox.onscroll-fade-in .image img {
+    width: 100%; /* Make images fill their container */
+    height: 100%; /* Maintain aspect ratio and fit container */
+    object-fit: cover; /* Ensure the image fits perfectly inside its box */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+.gallery.style2.medium.lightbox.onscroll-fade-in .caption {
+    position: absolute; /* Overlay the text on the image */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for perfect centering */
+    color: white; /* Text color for visibility */
+    font-size: 1rem; /* Adjust font size for captions */
+    font-weight: bold; /* Make the text stand out */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
+    z-index: 2; /* Ensure the text stays above the image */
+    pointer-events: none; /* Prevent text from blocking clicks on the image */
+}
+
+.gallery.style2.medium.lightbox.onscroll-fade-in article:hover .image img {
+    filter: brightness(70%); /* Dim the image slightly on hover for emphasis */
+    transition: filter 0.3s ease; /* Smooth transition */
+}
+
 .thumbnail-container {
     position: relative;
     display: inline-block;
