@@ -8790,43 +8790,39 @@ body {
 }
 /* more-photos.html */
 /* Responsive Grid for more-photos.html */
-/* Responsive Grid for more-photos.html */
+/* Responsive Grid for Gallery Thumbnails */
 .gallery.style2.medium {
     display: grid; /* Use grid layout */
     grid-template-columns: repeat(2, 1fr); /* 2 equal-width columns */
     gap: 20px; /* Space between grid items */
     margin: 0 auto; /* Center the gallery horizontally */
     padding: 0; /* Remove unnecessary padding around the gallery */
-    background: none; /* Ensure no background color on the gallery container */
-    border: none; /* Remove any borders */
 }
 
 .gallery.style2.medium .thumbnail-container {
     display: flex;
-    flex-direction: column; /* Ensure images and captions align properly */
-    align-items: center; /* Center-align thumbnails */
+    flex-direction: column; /* Stack image and caption */
+    align-items: center; /* Center-align content */
     justify-content: center;
-    text-align: center; /* Center-align captions */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margins */
-    background: none; /* Remove background color */
-    border: none; /* Remove borders */
+    text-align: center;
+    padding: 0; /* Remove extra padding */
+    margin: 0; /* Reset margins */
 }
 
 .gallery.style2.medium img {
-    width: 100%; /* Fit image to its grid container */
-    height: auto; /* Maintain aspect ratio */
-    max-width: none; /* Ensure images don't shrink */
-    margin: 0; /* Remove extra margin around images */
+    width: 150px; /* Set uniform width for all previews */
+    height: 300px; /* Set uniform height for all previews */
+    object-fit: cover; /* Ensure the image fills the space proportionally */
     border: none; /* Remove borders */
     box-shadow: none; /* Ensure no shadows */
-    background: none; /* Remove any background color */
+    margin: 0; /* Reset margins */
+    background: none; /* Ensure no background color */
 }
 
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
     .gallery.style2.medium {
-        grid-template-columns: 1fr; /* Switch to 1 column for smaller screens */
+        grid-template-columns: repeat(1, 1fr); /* Switch to 1 column for smaller screens */
     }
 }
 
