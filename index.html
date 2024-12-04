@@ -25,70 +25,63 @@
 	<a href="#contact"><i class="material-icons">email</i><span class="icon-text">Contact</span></a>
 </div>
 
-<!-- Main Content -->
-<div id="bio" class="divided">
-	<!-- One -->
-	<section class="banner style5 orient-left content-align-left image-position-right fullscreen onscroll-content-fade-up">
-		<!-- <div class="content" style="position: absolute; top: 25%; left: 5%"> -->
-		<div class="content" >
-
-			<h1 style="color: rgb(255, 255, 255);"><strong>Angela Albi</strong></h1>
-			<p class="major"><strong>Hi! I am a post-doctoral researcher interested in fundamental principles of how and why animals move together and how their interactions shape their group behaviour.</strong></p>
-			<ul class="actions stacked">
-				<li><a href="bio.html" class="button" style="color: rgb(0, 0, 255); background-color: rgba(79, 79, 79, 0.8);">Bio</a></li>
-			</ul>
-		</div>
-		<div class="image" style="width: 110%; opacity: 0.9;">
-			<img src="images/shark_front_angela.jpg" alt="Angela Albi Shark Image" oncontextmenu="return false;" />
-		</div>
-	</section>
-</div>
-
 <!-- JavaScript for Sidebar Toggle -->
 <script>
-var mini = true;
+	var mini = true;
+	
+	function toggleSidebar() {
+	  if (mini) {
+		console.log("opening sidebar");
+		document.getElementById("mySidebar").style.width = "250px";
+		document.getElementById("bio").style.marginLeft = "250px"; // Ensure bio is used if there is no main
+		document.getElementById("predator-prey").style.marginLeft = "250px"; // Ensure bio is used if there is no main
+		document.getElementById("guppies").style.marginLeft = "250px"; // Ensure bio is used if there is no main
+		document.getElementById("contact").style.marginLeft = "250px"; // Ensure bio is used if there is no main
+	
+		mini = false;
+	  } else {
+		console.log("closing sidebar");
+		document.getElementById("mySidebar").style.width = "85px";
+		document.getElementById("bio").style.marginLeft = "85px"; // Ensure bio is used if there is no main
+		document.getElementById("predator-prey").style.marginLeft = "85px"; // Ensure bio is used if there is no main
+		document.getElementById("guppies").style.marginLeft = "85px"; // Ensure bio is used if there is no main
+		document.getElementById("contact").style.marginLeft = "85px"; // Ensure bio is used if there is no main
+	
+		mini = true;
+	  }
+	}
+	</script>
 
-function toggleSidebar() {
-  if (mini) {
-    console.log("opening sidebar");
-    document.getElementById("mySidebar").style.width = "250px";
-    document.getElementById("bio").style.marginLeft = "250px"; // Ensure bio is used if there is no main
-	document.getElementById("predator-prey").style.marginLeft = "250px"; // Ensure bio is used if there is no main
-	document.getElementById("guppies").style.marginLeft = "250px"; // Ensure bio is used if there is no main
-	document.getElementById("contact").style.marginLeft = "250px"; // Ensure bio is used if there is no main
-
-    mini = false;
-  } else {
-    console.log("closing sidebar");
-    document.getElementById("mySidebar").style.width = "85px";
-    document.getElementById("bio").style.marginLeft = "85px"; // Ensure bio is used if there is no main
-	document.getElementById("predator-prey").style.marginLeft = "85px"; // Ensure bio is used if there is no main
-	document.getElementById("guppies").style.marginLeft = "85px"; // Ensure bio is used if there is no main
-	document.getElementById("contact").style.marginLeft = "85px"; // Ensure bio is used if there is no main
-
-    mini = true;
-  }
-}
-</script>
-				
-
-
-
-
-<section id="predator-prey" class="spotlight style5 orient-right content-align-left image-position-center onscroll-image-fade-in" style="position: relative;">
-<div class="video" style="flex: 1; max-width: 100%; height: auto; display: flex; justify-content: center; align-items: center; position: relative;">
-	<video autoplay muted loop style="width: auto; height: auto; object-fit: contain;">
-		<source src="images/sharks_collectionhd_trime.mp4" type="video/mp4">
-		Your browser does not support the video tag.
-	</video>
-	<div class="content" style="position: absolute; top: 70%; left: 20%; transform: translate(-40%, -50%); text-align: left; color: white; background: rgba(255, 255, 255, 0); padding: 20px;">
-		<h2><strong>Predator-prey interactions in the field</h2>
-		<p>In the shallow waters of the Maldives, young blacktip reef sharks circle within large schools of baitfish. We use drones and quantitative analysis to study their behavior.<strong></strong></p>
-		<ul class="actions stacked">
-			<li><a href="learnmore_sharks.html" class="button" style="color: rgb(0, 0, 255); background-color: rgba(79, 79, 79, 0.8);">Learn More</a></li>
-		</ul>
-	</div>
+<!-- Main Content -->
+<div id="bio" class="divided">
+    <section class="banner style5 orient-left content-align-left image-position-right fullscreen onscroll-content-fade-up">
+        <div class="content" style="position: absolute; top: 70%; left: 20%; transform: translate(-40%, -50%); text-align: left; color: white; background: rgba(255, 255, 255, 0); padding: 20px;">
+            <h1 style="color: rgb(255, 255, 255);"><strong>Angela Albi</strong></h1>
+            <p class="major"><strong>Hi! I am a post-doctoral researcher interested in fundamental principles of how and why animals move together and how their interactions shape their group behaviour.</strong></p>
+            <ul class="actions stacked">
+                <li><a href="bio.html" class="button" style="color: rgb(0, 0, 255); background-color: rgba(79, 79, 79, 0.8);">Bio</a></li>
+            </ul>
+        </div>
+        <div class="image" style="width: 110%; opacity: 0.9;">
+            <img src="images/shark_front_angela.jpg" alt="Angela Albi Shark Image" oncontextmenu="return false;" />
+        </div>
+    </section>
 </div>
+
+<section id="predator-prey" class="spotlight style5 orient-right content-align-left image-position-center onscroll-image-fade-in">
+    <div class="video" style="flex: 1; max-width: 100%; height: auto; display: flex; justify-content: center; align-items: center; position: relative;">
+        <video autoplay muted loop style="width: auto; height: auto; object-fit: contain;">
+            <source src="images/sharks_collectionhd_trime.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="content" style="position: absolute; top: 70%; left: 20%; transform: translate(-40%, -50%); text-align: left; color: white; background: rgba(255, 255, 255, 0); padding: 20px;">
+            <h2><strong>Predator-prey interactions in the field</strong></h2>
+            <p>In the shallow waters of the Maldives, young blacktip reef sharks circle within large schools of baitfish. We use drones and quantitative analysis to study their behavior.</p>
+            <ul class="actions stacked">
+                <li><a href="learnmore_sharks.html" class="button" style="color: rgb(0, 0, 255); background-color: rgba(79, 79, 79, 0.8);">Learn More</a></li>
+            </ul>
+        </div>
+    </div>
 </section>
 
 <!-- Four change position text and video  -->
@@ -161,10 +154,10 @@ function toggleSidebar() {
     <!-- Article 4 -->
     <article>
         <a href="images/gallery/fulls/btip_ray.jpg" target="_blank" class="image">
-            <img src="images/gallery/thumbs/btip_ray.jpg" alt="The hunt from above" />
+            <img src="images/gallery/thumbs/btip_ray.jpg" alt="Shark attack" />
         </a>
         <div class="caption">
-            <h3>The hunt from above</h3>
+            <h3>Shark attacks</h3>
             <p>Two young blacktip reef sharks swim in the shallow water, their fins slicing through the waves as they close in on a stingray evading their attack.</p>
         </div>
     </article>
