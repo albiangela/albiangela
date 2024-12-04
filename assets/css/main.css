@@ -8756,220 +8756,6 @@ body {
     margin-left: 250px; /* Adjust margin when sidebar expands */
 }
 
-
-
-/* of the naming on the gallery thumbnails */
-/* Adjusted Gallery Styles to Remove Gray Bar */
-.gallery {
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(3, 1fr); /* Create 3 equal-width columns */
-    gap: 20px; /* Space between items */
-    padding: 0; /* Remove padding around the gallery container */
-}
-
-.gallery img {
-    width: 100%; /* Ensure images fit their grid container */
-    height: auto; /* Maintain aspect ratio */
-    max-width: none; /* Ensure the image scales properly */
-    margin: 0; /* Reset margins */
-    background: none; /* Ensure no background is applied */
-}
-
-/* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
-    .gallery {
-        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
-    }
-}
-
-@media (max-width: 480px) {
-    .gallery {
-        grid-template-columns: 1fr; /* Switch to 1 column */
-    }
-}
-/* more-photos.html */
-.gallery.style2.medium.lightbox.onscroll-fade-in {
-    display: flex;
-    flex-wrap: wrap; /* Allow thumbnails to wrap to new rows */
-    gap: 20px; /* Space between thumbnails */
-    justify-content: center; /* Center-align items */
-    padding: 20px;
-}
-
-.gallery.style2.medium.lightbox.onscroll-fade-in article {
-    width: 300px; /* Set a consistent width for thumbnails */
-    text-align: center; /* Center-align captions */
-}
-
-.gallery.style2.medium.lightbox.onscroll-fade-in img {
-    width: 100%; /* Make thumbnails fill their container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Optional: Add rounded corners */
-    transition: transform 0.3s ease; /* Smooth hover effect */
-}
-
-.gallery.style2.medium.lightbox.onscroll-fade-in article:hover img {
-    transform: scale(1.05); /* Zoom in slightly on hover */
-}
-
-.gallery.style2.medium.lightbox.onscroll-fade-in .caption {
-    margin-top: 10px;
-    font-size: 0.8rem; /* Smaller font size for captions */
-    color: #ffffff;
-}
-
-.gallery.style2.medium.lightbox.onscroll-fade-in article:hover .caption {
-    color: #fffcfc; /* Ensure no color change on hover */
-    transition: none; /* Remove transition effects for captions */
-	font-size: 0.7rem;
-}
-
-/* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
-    .gallery.style2.medium {
-        grid-template-columns: repeat(1, 1fr); /* Switch to 1 column for smaller screens */
-    }
-}
-/* Gallery for more-photos.html */
-.gallery {
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(3, 1fr); /* Explicitly set 3 equal-width columns */
-    gap: 20px; /* Space between grid items */
-    margin: 0 auto; /* Center the gallery horizontally */
-    padding: 20px; /* Optional padding around the gallery */
-}
-
-.gallery article {
-    text-align: center; /* Center-align captions */
-}
-
-.gallery img {
-    width: 100%; /* Ensure images fit their grid container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Optional rounded corners */
-    transition: transform 0.3s ease; /* Smooth hover effect */
-}
-
-.gallery article:hover img {
-    transform: scale(1.05); /* Zoom in slightly on hover */
-}
-
-.gallery .caption {
-    margin-top: 10px;
-    font-size: 0.8rem; /* Smaller font size for captions */
-    color: #555;
-    text-align: center; /* Center-align text */
-}
-
-/* see more */
-/* Styles for the gallery section */
-#gallery .inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#gallery a {
-    text-decoration: none;
-    font-size: 1rem;
-    color: #003a77;
-    transition: color 0.3s;
-}
-
-#gallery a:hover {
-    color: #458bd2; /* Slightly lighter blue for hover effect */
-}
-
-/* Captions */
-.gallery.style2.medium.lightbox.onscroll-fade-in .caption {
-    position: absolute; /* Overlay the text on the image */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Perfect centering */
-    color: white !important; /* Force white text color */
-    font-size: 0.6rem; /* Smaller font size */
-    font-weight: bold; /* Make the text stand out */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle shadow for readability */
-    z-index: 2; /* Ensure it is above the image */
-    pointer-events: none; /* Prevent blocking clicks */
-    transition: none; /* Disable transitions on color */
-}
-
-/* Hover Behavior */
-.gallery.style2.medium.lightbox.onscroll-fade-in article:hover .caption {
-    color: white !important; /* Ensure text stays white */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Keep shadow */
-}
-
-/* Gallery Container */
-.gallery.style2.medium.lightbox.onscroll-fade-in {
-    display: flex; /* Flexbox for horizontal scrolling */
-    gap: 0px; /* No space between thumbnails */
-    overflow-x: auto; /* Allow scrolling */
-    padding: 0px; /* Remove extra padding */
-    scroll-behavior: smooth; /* Smooth scroll */
-    width: 100vw; /* Full viewport width */
-    box-sizing: border-box; /* Include padding and borders in width */
-}
-
-/* Article Settings */
-.gallery.style2.medium.lightbox.onscroll-fade-in article {
-    position: relative; /* Enable child positioning */
-    flex: 0 0 auto; /* Prevent shrinking */
-    width: 300px; /* Thumbnail width */
-    height: 200px; /* Thumbnail height */
-    text-align: center; /* Align captions */
-}
-
-/* Image Container */
-.gallery.style2.medium.lightbox.onscroll-fade-in .image {
-    position: relative; /* Enable overlay positioning */
-    width: 100%; /* Fill parent container */
-    height: 100%; /* Match parent height */
-    overflow: hidden; /* Clip overflow */
-}
-
-/* Images */
-.gallery.style2.medium.lightbox.onscroll-fade-in .image img {
-    width: 100%; /* Fill container width */
-    height: 100%; /* Fill container height */
-    object-fit: cover; /* Maintain aspect ratio */
-    border-radius: 0px; /* Optional rounded corners */
-}
-
-
-
-/* Gallery in more-photos.html */
-.gallery.style2.medium {
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(2, 1fr); /* Create 3 equal-width columns */
-    gap: 20px; /* Space between items */
-    margin: 0 auto; /* Center the gallery */
-    padding: 20px; /* Optional padding around the gallery */
-}
-
-.gallery.style2.medium .thumbnail-container {
-    text-align: center; /* Center-align the content */
-}
-
-.gallery.style2.medium .thumbnail-container img {
-    width: 100%; /* Make images fit their container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Optional: Add rounded corners */
-    transition: transform 0.3s ease; /* Smooth hover effect */
-}
-
-.gallery.style2.medium .thumbnail-container:hover img {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-}
-
-.gallery.style2.medium .caption {
-    margin-top: 0px;
-    font-size: 0.8rem; /* Smaller font size for captions */
-    color: #555; /* Text color */
-    text-align: center; /* Center-align captions */
-}
-
 .thumbnail-container .caption {
     font-size: 1.7rem !important;; /* Adjust font size */
     color: white; /* Default color */
@@ -8998,4 +8784,117 @@ img {
 
 .gallery img {
     pointer-events: none; /* Disable right-click on gallery images */
+}
+
+
+/* Scrolling Gallery on Index Page */
+#scrolling-gallery {
+    display: flex; /* Horizontal layout */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    gap: 0; /* No gaps between images */
+    padding: 0; /* No padding around gallery */
+    margin: 0; /* No margin */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    width: 100vw; /* Full width of viewport */
+    height: 200px; /* Set fixed height */
+    box-sizing: border-box; /* Include borders and padding in width */
+}
+
+/* Images in Scrolling Gallery */
+#scrolling-gallery .image img {
+    width: 300px; /* Fixed width for thumbnails */
+    height: 200px; /* Fixed height for uniform size */
+    object-fit: cover; /* Ensure proper image scaling */
+    display: block; /* Prevent inline spacing */
+    border: none; /* Remove any borders */
+}
+
+/* Hover Effects for Scrolling Gallery */
+#scrolling-gallery .image:hover img {
+    transform: scale(1.05); /* Slight zoom effect */
+    transition: transform 0.3s ease; /* Smooth zoom transition */
+}
+
+/* Captions in Scrolling Gallery */
+#scrolling-gallery .caption {
+    position: absolute; /* Overlay caption on image */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Perfect centering */
+    color: white; /* White text */
+    font-size: 0.8rem; /* Adjust font size */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for readability */
+    pointer-events: none; /* Don't block clicks */
+    z-index: 1; /* Ensure it's above the image */
+}
+
+/* Horizontal Scrollbar Styling */
+#scrolling-gallery::-webkit-scrollbar {
+    height: 8px; /* Custom scrollbar height */
+    background: #e0e0e0; /* Light scrollbar background */
+}
+
+#scrolling-gallery::-webkit-scrollbar-thumb {
+    background: #888; /* Dark scrollbar handle */
+    border-radius: 5px; /* Rounded edges */
+}
+
+/* Grid Galleries */
+.grid-gallery {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Create 2 equal-width columns */
+    gap: 20px; /* Space between items */
+    margin: 0 auto; /* Center the gallery horizontally */
+    padding: 20px; /* Padding around the gallery */
+    max-width: 800px; /* Restrict maximum width */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Images in Grid Galleries */
+.grid-gallery .image {
+    position: relative; /* Enable positioning for overlay elements */
+    display: block; /* Ensure full link area is clickable */
+    overflow: hidden; /* Clip content inside the image area */
+}
+
+.grid-gallery img {
+    width: 100%; /* Fill the grid cell */
+    height: 200px; /* Uniform height */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional rounded corners */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Captions - Hidden by Default */
+.grid-gallery .caption {
+    position: absolute; /* Overlay the caption on the image */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Perfect centering */
+    color: white; /* White text for visibility */
+    font-size: 1rem; /* Default font size */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow for better readability */
+    z-index: 2; /* Ensure it appears above the image */
+    opacity: 0; /* Initially hidden */
+    pointer-events: none; /* Prevent interaction issues */
+    transition: opacity 0.1s ease, transform 0.1s ease, font-size 0.1s ease; /* Smooth appearance and size change */
+}
+
+/* Hover Effects for Grid Galleries */
+.grid-gallery .image:hover img {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.grid-gallery .image:hover .caption {
+    opacity: 1; /* Show caption on hover */
+    transform: translate(-50%, -50%) scale(1); /* Keep centered and scale font size */
+    font-size: 1.5rem; /* Larger font size on hover */
+}
+
+/* Responsive Design for Grid Galleries */
+@media (max-width: 768px) {
+    .grid-gallery {
+        grid-template-columns: repeat(1, 1fr); /* Single column for smaller screens */
+    }
 }
