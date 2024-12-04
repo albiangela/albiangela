@@ -8950,3 +8950,31 @@ body {
     margin: 0; /* Remove margin */
     padding: 0; /* Remove padding */
 }
+
+/* avoid download */
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+
+.image-container {
+    width: 300px; /* Thumbnail width */
+    height: 200px; /* Thumbnail height */
+    background-size: cover;
+    background-position: center;
+}
+
+.image {
+    width: 300px; /* Thumbnail width */
+    height: 200px; /* Thumbnail height */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
