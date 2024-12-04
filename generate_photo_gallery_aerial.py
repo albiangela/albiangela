@@ -36,7 +36,7 @@ with open(output_file, "w") as html_file:
         <div class="inner">
             <h2>Aerial</h2>
             <div class="gallery style2 medium lightbox">
-                <div class="gallery">\n""")
+                <div class="grid-gallery">\n""")
 
     # Loop through the thumbnails directory to find images
     for thumb in sorted(os.listdir(thumbs_folder)):
