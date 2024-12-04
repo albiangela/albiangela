@@ -9,21 +9,7 @@
         // Disable right-click on all images
         document.addEventListener("contextmenu", function (e) {
             if (e.target.tagName === "IMG") {
-                e.preventDefault(); // Disable context menu for images
-            }
-        });
-
-        // Disable drag for all images
-        document.addEventListener("dragstart", function (e) {
-            if (e.target.tagName === "IMG") {
-                e.preventDefault(); // Prevent dragging images
-            }
-        });
-
-        // Disable copy and save commands on images
-        document.addEventListener("keydown", function (e) {
-            if ((e.ctrlKey || e.metaKey) && (e.key === "s" || e.key === "u" || e.key === "p")) {
-                e.preventDefault(); // Prevent save, view source, and print commands
+                e.preventDefault(); // Prevent the default context menu
             }
         });
     </script>
@@ -34,57 +20,143 @@
             <a href="index.html">Home</a> | <a href="more-photos.html">Back to Gallery</a>
         </nav>
     </header>
-    <section id="aerial-photos" class="wrapper style1 align-center">
+    <section id="nature-photos" class="wrapper style1 align-center">
         <div class="inner">
             <h2>Nature</h2>
             <div class="gallery style2 medium lightbox">
                 <div class="grid-gallery">
-                    <!-- Photo 1 -->
-                    <article>
-                        <a href="images/gallery/fulls_nature/0D2A9691-Enhanced-NR.jpg" class="image" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'>
-                            <img src="images/gallery/thumbs_nature/0D2A9691-Enhanced-NR.jpg" alt="Photo" ondragstart="return false;" />
-                        </a>
-                        
-                    </article>
-
-
 
                     <article>
-                        <a href="images/gallery/fulls_nature/0D2A9691-Enhanced-NR.jpg" class="image" style="background-image: url('images/gallery/thumbs_nature/DSC02902.jpg'); background-size: cover; background-position: center; width: 100%; height: 200px;" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'>
-                            <img src="images/gallery/thumbs_nature/0D2A9691-Enhanced-NR.jpg" alt="Photo" ondragstart="return false;" />
-
-                        </a>
-                    </article>
-                    
-                    <!-- Photo 2 -->
-                    <article>
-                        <a href="images/gallery/fulls_nature/18-villasbait_enhanced.jpg" class="image" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'>
-                            <img src="images/gallery/thumbs_nature/18-villasbait_enhanced.jpg" alt="Photo" ondragstart="return false;" />
+                        <a href="images/gallery/fulls_nature/1-sharkfront-2.jpg" class="image" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'>
+                            <img src="images/gallery/thumbs_nature/1-sharkfront-2.jpg" alt="Photo">
                         </a>
                     </article>
 
-                    <!-- Photo 3 -->
                     <article>
-                        <a href="images/gallery/fulls_nature/DSC01206.jpg" class="image" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'>
-                            <img src="images/gallery/thumbs_nature/DSC01206.jpg" alt="Photo" ondragstart="return false;" />
+                        <a href="images/gallery/fulls_nature/14-squid_night-2.jpg" class="image" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'>
+                            <img src="images/gallery/thumbs_nature/14-squid_night-2.jpg" alt="Photo">
                         </a>
                     </article>
 
-                    <!-- Photo 4 -->
                     <article>
-                        <a href="images/gallery/fulls_nature/DSC01761-Enhanced-SR.jpg" class="image" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'>
-                            <img src="images/gallery/thumbs_nature/DSC01761-Enhanced-SR.jpg" alt="Photo" ondragstart="return false;" />
+                        <a href="images/gallery/fulls_nature/18-villasbait_enhanced-2.jpg" class="image" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'>
+                            <img src="images/gallery/thumbs_nature/18-villasbait_enhanced-2.jpg" alt="Photo">
                         </a>
                     </article>
 
-                    <!-- Photo 5 -->
                     <article>
-                        <a href="images/gallery/fulls_nature/DSC02902.jpg" class="image" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'>
-                            <img src="images/gallery/thumbs_nature/DSC02902.jpg" alt="Photo" ondragstart="return false;" />
+                        <a href="images/gallery/fulls_nature/8-DSC09858-2.jpg" class="image" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'>
+                            <img src="images/gallery/thumbs_nature/8-DSC09858-2.jpg" alt="Photo">
                         </a>
                     </article>
 
-                    <!-- Add more photos here -->
+                    <article>
+                        <a href="images/gallery/fulls_nature/P1012933 2-2.jpg" class="image" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'>
+                            <img src="images/gallery/thumbs_nature/P1012933 2-2.jpg" alt="Photo">
+                        </a>
+                    </article>
+
+                    <article>
+                        <a href="images/gallery/fulls_nature/P1013505-2.jpg" class="image" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'>
+                            <img src="images/gallery/thumbs_nature/P1013505-2.jpg" alt="Photo">
+                        </a>
+                    </article>
+
+                    <article>
+                        <a href="images/gallery/fulls_nature/bait_spiral_aa-2.jpg" class="image" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'>
+                            <img src="images/gallery/thumbs_nature/bait_spiral_aa-2.jpg" alt="Photo">
+                        </a>
+                    </article>
+
+                    <article>
+                        <a href="images/gallery/fulls_nature/btip_ray-2.jpg" class="image" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'>
+                            <img src="images/gallery/thumbs_nature/btip_ray-2.jpg" alt="Photo">
+                        </a>
+                    </article>
+
+                    <article>
+                        <a href="images/gallery/fulls_nature/btiphalf-2.jpg" class="image" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'>
+                            <img src="images/gallery/thumbs_nature/btiphalf-2.jpg" alt="Photo">
+                        </a>
+                    </article>
+
+                    <article>
+                        <a href="images/gallery/fulls_nature/btipwave-2.jpg" class="image" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'>
+                            <img src="images/gallery/thumbs_nature/btipwave-2.jpg" alt="Photo">
+                        </a>
+                    </article>
+
+                    <article>
+                        <a href="images/gallery/fulls_nature/cicada-2.jpg" class="image" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'>
+                            <img src="images/gallery/thumbs_nature/cicada-2.jpg" alt="Photo">
+                        </a>
+                    </article>
+
+                    <article>
+                        <a href="images/gallery/fulls_nature/closup_school_aa-2.jpg" class="image" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'>
+                            <img src="images/gallery/thumbs_nature/closup_school_aa-2.jpg" alt="Photo">
+                        </a>
+                    </article>
+
+                    <article>
+                        <a href="images/gallery/fulls_nature/cuttlefish-2.jpg" class="image" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'>
+                            <img src="images/gallery/thumbs_nature/cuttlefish-2.jpg" alt="Photo">
+                        </a>
+                    </article>
+
+                    <article>
+                        <a href="images/gallery/fulls_nature/down-2.jpg" class="image" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'>
+                            <img src="images/gallery/thumbs_nature/down-2.jpg" alt="Photo">
+                        </a>
+                    </article>
+
+                    <article>
+                        <a href="images/gallery/fulls_nature/frog-2.jpg" class="image" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'>
+                            <img src="images/gallery/thumbs_nature/frog-2.jpg" alt="Photo">
+                        </a>
+                    </article>
+
+                    <article>
+                        <a href="images/gallery/fulls_nature/grayr-2.jpg" class="image" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'>
+                            <img src="images/gallery/thumbs_nature/grayr-2.jpg" alt="Photo">
+                        </a>
+                    </article>
+
+                    <article>
+                        <a href="images/gallery/fulls_nature/macaque-2.jpg" class="image" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'>
+                            <img src="images/gallery/thumbs_nature/macaque-2.jpg" alt="Photo">
+                        </a>
+                    </article>
+
+                    <article>
+                        <a href="images/gallery/fulls_nature/pillar-2.jpg" class="image" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'>
+                            <img src="images/gallery/thumbs_nature/pillar-2.jpg" alt="Photo">
+                        </a>
+                    </article>
+
+                    <article>
+                        <a href="images/gallery/fulls_nature/puff-2.jpg" class="image" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'>
+                            <img src="images/gallery/thumbs_nature/puff-2.jpg" alt="Photo">
+                        </a>
+                    </article>
+
+                    <article>
+                        <a href="images/gallery/fulls_nature/scuba-2.jpg" class="image" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'>
+                            <img src="images/gallery/thumbs_nature/scuba-2.jpg" alt="Photo">
+                        </a>
+                    </article>
+
+                    <article>
+                        <a href="images/gallery/fulls_nature/tuna_milling_aa-2.jpg" class="image" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'>
+                            <img src="images/gallery/thumbs_nature/tuna_milling_aa-2.jpg" alt="Photo">
+                        </a>
+                    </article>
+
+                    <article>
+                        <a href="images/gallery/fulls_nature/waterbirds-2.jpg" class="image" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'>
+                            <img src="images/gallery/thumbs_nature/waterbirds-2.jpg" alt="Photo">
+                        </a>
+                    </article>
                 </div>
             </div>
         </div>

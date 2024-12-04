@@ -15,7 +15,7 @@ with open(output_file, "w") as html_file:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aerial</title>
+    <title>Chrono</title>
     <link rel="stylesheet" href="assets/css/main.css">
     <script>
         // Disable right-click on all images
@@ -32,12 +32,11 @@ with open(output_file, "w") as html_file:
             <a href="index.html">Home</a> | <a href="more-photos.html">Back to Gallery</a>
         </nav>
     </header>
-    <section id="aerial-photos" class="wrapper style1 align-center">
+    <section id="chrono-photos" class="wrapper style1 align-center">
         <div class="inner">
-            <h2>Aerial</h2>
+            <h2>Chrono</h2>
             <div class="gallery style2 medium lightbox">
-                <div class="gallery">\n""")
-
+                <div class="grid-gallery">\n""")
 
     # Loop through the thumbnails directory to find images
     for thumb in sorted(os.listdir(thumbs_folder)):
@@ -53,7 +52,6 @@ with open(output_file, "w") as html_file:
                             <img src="{thumb_image_path}" alt="Photo">
                         </a>
                     </article>\n""")
-
 
     # Close the gallery divs and the HTML structure
     html_file.write("""                </div>
