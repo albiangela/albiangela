@@ -8786,6 +8786,19 @@ img {
     pointer-events: none; /* Disable right-click on gallery images */
 }
 
+/* Ensure caption titles are white */
+.gallery .caption h3 {
+    color: white !important; /* Make the title white */
+    font-size: 1.2rem; /* Adjust the size if needed */
+    margin: 0; /* Ensure no extra spacing around the title */
+    padding: 0; /* Remove extra padding */
+    transition: color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover behavior */
+.gallery article:hover .caption h3 {
+    color: white; /* Ensure it stays white on hover */
+}
 
 /* Scrolling Gallery on Index Page */
 #scrolling-gallery {
@@ -8822,7 +8835,7 @@ img {
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Perfect centering */
-    color: white; /* White text */
+    color: rgb(255, 255, 255); /* White text */
     font-size: 0.8rem; /* Adjust font size */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for readability */
     pointer-events: none; /* Don't block clicks */
@@ -8832,7 +8845,7 @@ img {
 /* Horizontal Scrollbar Styling */
 #scrolling-gallery::-webkit-scrollbar {
     height: 8px; /* Custom scrollbar height */
-    background: #e0e0e0; /* Light scrollbar background */
+    background: #ffffff; /* Light scrollbar background */
 }
 
 #scrolling-gallery::-webkit-scrollbar-thumb {
@@ -8897,4 +8910,43 @@ img {
     .grid-gallery {
         grid-template-columns: repeat(1, 1fr); /* Single column for smaller screens */
     }
+}
+
+/* Ensure no margin or padding for sections */
+section {
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure body has no margin or padding */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Remove gaps caused by banners and spotlights */
+.banner,
+.spotlight {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a consistent height for the video and image sections */
+.banner .image img,
+.spotlight .video {
+    display: block; /* Prevent inline gaps */
+    width: 100%; /* Ensure full width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Remove any unexpected gaps caused by HTML or body */
+html,
+body {
+    height: 100%;
+}
+
+#predator-prey {
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
 }
