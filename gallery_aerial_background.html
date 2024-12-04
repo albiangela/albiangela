@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aerial</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+    <script>
+        // Disable right-click on the entire document
+        document.addEventListener("contextmenu", function (e) {
+            e.preventDefault();
+        });
+
+        // Disable drag-and-drop for images
+        document.addEventListener("dragstart", function (e) {
+            if (e.target.tagName === "IMG") {
+                e.preventDefault();
+            }
+        });
+    </script>
+    <style>
+        /* Hide image URLs by replacing <img> with CSS background images */
+        .grid-gallery .image {
+            display: block;
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 5px; /* Optional rounded corners */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a> | <a href="more-photos.html">Back to Gallery</a>
+        </nav>
+    </header>
+    <section id="aerial-photos" class="wrapper style1 align-center">
+        <div class="inner">
+            <h2>Aerial</h2>
+            <div class="gallery style2 medium lightbox">
+                <div class="grid-gallery">
+                    <!-- Replacing <img> tags with background-image -->
+                    <article>
+                        <a href="images/gallery/fulls_aerial/the_hunt_from_above.jpg" class="image" style="background-image: url('images/gallery/thumbs_aerial/the_hunt_from_above.jpg');" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'></a>
+                    </article>
+                    <article>
+                        <a href="images/gallery/fulls_aerial/DJI_0384-6.jpg" class="image" style="background-image: url('images/gallery/thumbs_aerial/DJI_0384-6.jpg');" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'></a>
+                    </article>
+                    <article>
+                        <a href="images/gallery/fulls_aerial/DJI_20240224172156_0003_V.jpg" class="image" style="background-image: url('images/gallery/thumbs_aerial/DJI_20240224172156_0003_V.jpg');" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'></a>
+                    </article>
+                    <article>
+                        <a href="images/gallery/fulls_aerial/DJI_20240224172156_0003_V_f2.jpg" class="image" style="background-image: url('images/gallery/thumbs_aerial/DJI_20240224172156_0003_V_f2.jpg');" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'></a>
+                    </article>
+                    <article>
+                        <a href="images/gallery/fulls_aerial/P1012451.jpg" class="image" style="background-image: url('images/gallery/thumbs_aerial/P1012451.jpg');" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'></a>
+                    </article>
+                    <article>
+                        <a href="images/gallery/fulls_aerial/P1012453.jpg" class="image" style="background-image: url('images/gallery/thumbs_aerial/P1012453.jpg');" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'></a>
+                    </article>
+                    <article>
+                        <a href="images/gallery/fulls_aerial/P1012559.jpg" class="image" style="background-image: url('images/gallery/thumbs_aerial/P1012559.jpg');" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'></a>
+                    </article>
+                    <article>
+                        <a href="images/gallery/fulls_aerial/P1012568.jpg" class="image" style="background-image: url('images/gallery/thumbs_aerial/P1012568.jpg');" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'></a>
+                    </article>
+                    <article>
+                        <a href="images/gallery/fulls_aerial/P1012689.jpg" class="image" style="background-image: url('images/gallery/thumbs_aerial/P1012689.jpg');" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'></a>
+                    </article>
+                    <article>
+                        <a href="images/gallery/fulls_aerial/P1012729.jpg" class="image" style="background-image: url('images/gallery/thumbs_aerial/P1012729.jpg');" data-lightbox="gallery" data-lightbox-options='{"disableDownload": true}'></a>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'showDownloadLink': false
+        });
+    </script>
+</body>
+</html>
