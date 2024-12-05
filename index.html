@@ -7,9 +7,10 @@
 			e.preventDefault();
 		});
 	</script>
+	
 	<title>ANGELA ALBI</title>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Angela Albi's research on animal movement, group behavior, and predator-prey interactions.">
 	<meta name="keywords" content="Angela Albi, research, animal behavior, Maldives, blacktip reef sharks, drones, ecology">
 	<meta name="author" content="Angela Albi">
@@ -66,7 +67,7 @@
             </ul>
         </div>
         <div class="image" style="width: 110%; opacity: 0.9;">
-            <img src="images/shark_front_angela.jpg" alt="Angela Albi Shark Image" oncontextmenu="return false;" />
+            <img src="images/gallery/fulls_nature/1-sharkfront-2.jpg" alt="Angela Albi Shark Image" oncontextmenu="return false;" />
         </div>
     </section>
 </div>
@@ -120,7 +121,9 @@
 </section>
 
 <!-- Scrolling Gallery -->
-<div class="gallery style2 medium lightbox onscroll-fade-in">
+<div class="gallery style2 medium lightbox onscroll-fade-in" style="display: flex; overflow-x: auto; gap: 20px; padding: 10px;">
+
+<!-- <div class="gallery style2 medium lightbox onscroll-fade-in"> -->
     <!-- Article 1 -->
     <article>
         <a href="images/gallery/fulls_nature/1-sharkfront-2.jpg" target="_blank" class="image">
@@ -240,6 +243,12 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
-
+			<script>
+				lightbox.option({
+					'resizeDuration': 200,
+					'wrapAround': true,
+					'showDownloadLink': false
+				});
+			</script>
 	</body>
 </html>
