@@ -9110,3 +9110,40 @@ img {
         margin-right: 10px;
     }
 }
+
+/* Toggle button styles */
+.menu-toggle {
+    display: none; /* Hide by default */
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1100;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+/* Show the button on smaller screens */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show the toggle button */
+    }
+
+    #mySidebar {
+        position: fixed;
+        width: 0; /* Initially hidden */
+        overflow-x: hidden;
+        transition: width 0.3s;
+    }
+
+    #mySidebar.open {
+        width: 250px; /* Expanded width when open */
+    }
+
+    #bio, #predator-prey, #guppies, #gallery, #contact {
+        margin-left: 0; /* Prevent content overlap on small screens */
+    }
+}
