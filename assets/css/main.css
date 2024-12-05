@@ -9022,3 +9022,91 @@ img {
         display: block; /* Show the sidebar when toggle is active */
     }
 }
+
+
+/* Adjustments for small screens */
+@media screen and (max-width: 480px) {
+    /* General body adjustments */
+    body {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    /* Sidebar */
+    #mySidebar {
+        width: 85px;
+        position: fixed;
+        z-index: 1000;
+    }
+
+    #mySidebar a {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+
+    /* Header and Navigation */
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    header nav ul.menu {
+        display: none;
+    }
+
+    header nav button.menu-toggle {
+        display: block;
+        background: transparent;
+        border: none;
+        font-size: 1.2rem;
+    }
+
+    /* Main Content Sections */
+    .content {
+        padding: 10px;
+    }
+
+    .spotlight {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .spotlight .content {
+        margin-bottom: 1rem;
+    }
+
+    .spotlight .video,
+    .spotlight .image {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Scrolling Gallery */
+    .gallery {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        gap: 10px;
+    }
+
+    .gallery article {
+        flex: 0 0 auto;
+        width: 80%;
+    }
+
+    .gallery img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Footer Adjustments */
+    footer {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+
+    footer ul.icons li {
+        margin-right: 10px;
+    }
+}
