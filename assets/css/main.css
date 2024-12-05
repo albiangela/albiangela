@@ -3501,7 +3501,7 @@ input, select, textarea {
 				-webkit-object-fit: cover;
 				-ms-object-fit: cover;
 				object-fit: cover;
-				-moz-object-position: center;
+				object-position: center;
 				-webkit-object-position: center;
 				-ms-object-position: center;
 				object-position: center;
@@ -8614,9 +8614,14 @@ input, select, textarea {
 			}
 
 
+/* General Styles */
 body {
-	font-family: "Lato", sans-serif;
-  }
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
 
   
   .sidebar {
@@ -8687,26 +8692,6 @@ body {
     /* Other styles */
 }
 
-/* .container {
-    display: flex;
-} */
-.sidebar {
-    width: 75px;
-    position: fixed;
-    transition: width 0.5s;
-    /* Other styles */
-}
-.sidebar:hover {
-    width: 250px; /* Expanded width */
-}
-.divided {
-    margin-left: 45px;
-    transition: margin-left 0.5s;
-    /* Other styles */
-}
-.sidebar:hover + .divided {
-    margin-left: 250px; /* Adjust margin when sidebar expands */
-}
 
 .thumbnail-container .caption {
     font-size: 1.7rem !important;; /* Adjust font size */
@@ -8858,7 +8843,8 @@ img {
 }
 
 /* Responsive Design for Grid Galleries */
-@media (max-width: 768px) {
+@media (max-width: 768px)
+{
     .grid-gallery {
         grid-template-columns: repeat(1, 1fr); /* Single column for smaller screens */
     }
@@ -8912,6 +8898,8 @@ img {
     user-drag: none;
 }
 
+
+
 .image-container {
     width: 300px; /* Thumbnail width */
     height: 200px; /* Thumbnail height */
@@ -8951,25 +8939,70 @@ img {
 @media (max-width: 768px) {
     /* Sidebar */
     #mySidebar {
-        width: 100%; /* Full width for small screens */
-        position: fixed; /* Keep it fixed at the top */
+        position: fixed;
+        width: 0; /* Initially hidden */
         top: 0;
+        height: 100%; /* Full height for sidebar */
+        background: #111; /* Sidebar background color */
         z-index: 1000; /* Ensure it appears above other content */
-        height: auto; /* Adjust height */
-        overflow: hidden; /* Prevent overflow */
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+        transition: width 0.3s; /* Smooth width transition */
     }
 
-    #mySidebar a {
-        display: block; /* Stack links vertically */
-        padding: 10px; /* Add padding */
-        text-align: center; /* Center-align text */
+    #mySidebar.open {
+        width: 250px; /* Expanded width when open */
     }
 
-    /* Main Content */
-    #bio, #predator-prey, #guppies, #gallery, #contact {
-        margin-left: 0; /* Remove left margin to avoid cutting content */
-        padding: 10px; /* Add padding for spacing */
-    }
+	/* Sidebar Links */
+	#mySidebar a {
+		display: block; /* Ensure links stack vertically */
+		padding: 5px; /* Minimal padding for spacing */
+		text-align: center; /* Align text in the center */
+		color: #818181; /* Text color */
+		font-size: 1rem; /* Adjust text size */
+		text-decoration: none; /* Remove underline */
+		background: none !important; /* Remove any background color */
+		border: none !important; /* Remove borders */
+		box-shadow: none !important; /* Remove any shadow effect */
+	}
+
+	/* Hover Effects */
+	#mySidebar a:hover {
+		color: #f1f1f1; /* Change text color on hover */
+		background: none !important; /* Ensure no background on hover */
+		border: none !important; /* No border on hover */
+		box-shadow: none !important; /* No shadow on hover */
+	}
+
+
+}
+
+@media (max-width: 768px) {
+	#bio .content, #predator-prey .content {
+		position: static;
+		margin: 0 auto;
+		text-align: center;
+		max-width: 100%;
+		padding: 0px;
+	}
+
+	#bio .image, #predator-prey .video {
+		width: 100%;
+		height: auto;
+	}
+	.gallery {
+		display: block; /* Fallback for older browsers */
+	}
+}
+
+
+/* Fine-tuning for very small screens */
+@media (max-width: 480px) {
+	#bio .content, #predator-prey .content {
+		padding: 0px; /* Adjust padding for smaller screens */
+		font-size: 1rem; /* Adjust font size for readability */
+	}
+}
 
     /* Gallery */
     .gallery {
@@ -8982,7 +9015,7 @@ img {
         width: 100%; /* Make images responsive */
         height: auto; /* Maintain aspect ratio */
     }
-}
+
 
 /* Very Small Screens */
 @media (max-width: 480px) {
@@ -8995,80 +9028,20 @@ img {
         font-size: 1rem; /* Adjust paragraph size */
     }
 
-    /* Buttons */
     .button {
-        font-size: 0.9rem;
+        font-size: 0.9rem; /* Reduce button size */
         padding: 10px;
     }
-}
 
-/* Sidebar Toggle for Small Screens */
-@media (max-width: 768px) {
-    #mySidebar {
-        display: none; /* Hide the sidebar by default */
-    }
-
-    .menu-toggle {
-        display: block; /* Show a menu button */
-        background: #333;
-        color: white;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-        text-align: center;
-    }
-
-    .menu-toggle.open ~ #mySidebar {
-        display: block; /* Show the sidebar when toggle is active */
-    }
-}
-
-
-/* Adjustments for small screens */
-@media screen and (max-width: 480px) {
-    /* General body adjustments */
-    body {
-        font-size: 0.9rem;
-        line-height: 1.4;
-    }
-
-    /* Sidebar */
-    #mySidebar {
-        width: 85px;
-        position: fixed;
-        z-index: 1000;
-    }
-
+    /* Adjust Sidebar Links */
     #mySidebar a {
-        font-size: 0.8rem;
-        padding: 10px;
+        font-size: 0.8rem; 
+        padding: 12px;
     }
 
-    /* Header and Navigation */
-    header nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-    }
-
-    header nav ul.menu {
-        display: none;
-    }
-
-    header nav button.menu-toggle {
-        display: block;
-        background: transparent;
-        border: none;
-        font-size: 1.2rem;
-    }
-
-    /* Main Content Sections */
-    .content {
-        padding: 10px;
-    }
-
+    /* Spotlight Adjustments */
     .spotlight {
-        flex-direction: column;
+        flex-direction: column; /* Stack video and text */
         text-align: center;
     }
 
@@ -9082,24 +9055,6 @@ img {
         max-width: 100%;
     }
 
-    /* Scrolling Gallery */
-    .gallery {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: scroll;
-        gap: 10px;
-    }
-
-    .gallery article {
-        flex: 0 0 auto;
-        width: 80%;
-    }
-
-    .gallery img {
-        max-width: 100%;
-        height: auto;
-    }
-
     /* Footer Adjustments */
     footer {
         font-size: 0.8rem;
@@ -9111,39 +9066,120 @@ img {
     }
 }
 
-/* Toggle button styles */
-.menu-toggle {
-    display: none; /* Hide by default */
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 1100;
-    background: #333;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 1.2rem;
-}
 
-/* Show the button on smaller screens */
+
+
+/* Your Existing Styles (Already in your file)... */
+/* Responsive Design for Small Screens */
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: block; /* Show the toggle button */
-    }
 
     #mySidebar {
         position: fixed;
-        width: 0; /* Initially hidden */
-        overflow-x: hidden;
-        transition: width 0.3s;
+        width: 0; /* Sidebar initially hidden */
+        top: 0;
+        height: 100%; /* Full height for sidebar */
+        background: #111; /* Sidebar background color */
+        z-index: 1000; /* Ensure it appears above other content */
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+        transition: width 0.3s; /* Smooth width transition */
     }
 
     #mySidebar.open {
-        width: 250px; /* Expanded width when open */
+        width: 250px; /* Sidebar expands when open */
     }
 
-    #bio, #predator-prey, #guppies, #gallery, #contact {
-        margin-left: 0; /* Prevent content overlap on small screens */
+    /* Sidebar Links */
+    #mySidebar a {
+        display: block; /* Stack links vertically */
+        padding: 10px; /* Minimal padding for spacing */
+        text-align: center; /* Align text in the center */
+        color: #818181; /* Text color */
+        font-size: 1rem; /* Adjust text size */
+        text-decoration: none; /* Remove underline */
+        background: none !important; /* Remove any background color */
+        border: none !important; /* Remove borders */
+        box-shadow: none !important; /* Remove any shadow effect */
     }
+
+    /* Hover Effects */
+    #mySidebar a:hover {
+        color: #f1f1f1; /* Change text color on hover */
+        background: none !important; /* Ensure no background on hover */
+        border: none !important; /* No border on hover */
+        box-shadow: none !important; /* No shadow on hover */
+    }
+
+    /* Main Content */
+    /* #bio, #predator-prey, #guppies, #gallery, #contact {
+        margin-left: 0; /* Prevent content overlap */
+        /* padding: 10px; */
+    /* } */
+
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 20px;
+    }
+
+    .gallery img {
+        width: 100%; /* Make images responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjust Font Sizes */
+    h1, h2, h3 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .button {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+
+    footer ul.icons li {
+        margin-right: 10px;
+    }
+}
+
+
+/* Show Toggle Button for Small Screens */
+@media (max-width: 768px) {
+	.menu-toggle {
+		display: block; /* Show the toggle button */
+		background: none; /* Remove background */
+		background-color: transparent; /* Ensure background is transparent */
+		appearance: none; /* Remove default button styling */
+		-webkit-appearance: none; /* Remove default styling in Safari */
+		-moz-appearance: none; /* Remove default styling in Firefox */
+		color: #000; /* Black text */
+		border: none; /* Remove border */
+		padding: 10px; /* Add padding */
+		font-size: 1.2rem; /* Adjust font size */
+		text-align: left; /* Align text */
+		cursor: pointer; /* Pointer cursor on hover */
+		box-shadow: none; /* Remove any shadow */
+		outline: none; /* Remove focus outline */
+	}
+
+	/* Remove Hover Effects on Button */
+	.menu-toggle:hover {
+		color: #000; /* Keep text black */
+		background: none; /* Ensure no background */
+		border: none; /* No border */
+	}
+
+	.menu-toggle:focus {
+		outline: none; /* Remove focus outline */
+		border: none;
+	}
 }
