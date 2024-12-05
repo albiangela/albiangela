@@ -22,6 +22,7 @@
 <body class="is-preload">
 
 <!-- Sidebar -->
+<button id="menuToggle" class="menu-toggle">☰ Menu</button>
 <div id="mySidebar" class="sidebar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
 	<a href="#bio"><span><i class="material-icons">person</i><span class="icon-text">Bio</span></a><br>
 	<a href="#predator-prey"><i class="material-icons">laptop_mac</i><span class="icon-text">Research</span></a><br>
@@ -248,6 +249,17 @@
 					'resizeDuration': 200,
 					'wrapAround': true,
 					'showDownloadLink': false
+				});
+			</script>
+			<script>
+				document.addEventListener('DOMContentLoaded', () => {
+					const menuToggle = document.getElementById('menuToggle');
+					const sidebar = document.getElementById('mySidebar');
+			
+					menuToggle.addEventListener('click', () => {
+						sidebar.classList.toggle('open');
+						menuToggle.classList.toggle('open');
+					});
 				});
 			</script>
 	</body>
