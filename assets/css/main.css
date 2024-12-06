@@ -8615,12 +8615,12 @@ input, select, textarea {
 
 
 /* General Styles */
-body {
+/* body {
     font-family: "Lato", sans-serif;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-}
+    overflow-x: hidden;
+} */
 
 
   
@@ -8977,23 +8977,7 @@ img {
 
 }
 
-@media (max-width: 768px) {
-	#bio .content, #predator-prey .content {
-		position: static;
-		margin: 0 auto;
-		text-align: center;
-		max-width: 100%;
-		padding: 0px;
-	}
 
-	#bio .image, #predator-prey .video {
-		width: 100%;
-		height: auto;
-	}
-	.gallery {
-		display: block; /* Fallback for older browsers */
-	}
-}
 
 
 /* Fine-tuning for very small screens */
@@ -9163,7 +9147,7 @@ img {
 		-moz-appearance: none; /* Remove default styling in Firefox */
 		color: #000; /* Black text */
 		border: none; /* Remove border */
-		padding: 10px; /* Add padding */
+		padding: 10px; /* Add padding */ 
 		font-size: 1.2rem; /* Adjust font size */
 		text-align: left; /* Align text */
 		cursor: pointer; /* Pointer cursor on hover */
@@ -9183,3 +9167,4 @@ img {
 		border: none;
 	}
 }
+
