@@ -87,6 +87,11 @@ function toggleDropdown() {
 		display: block;
 	}
 }
+@media only screen and (max-width: 767px) {
+	.video-element {
+		autoplay: false;
+	}
+}
 </style>
 
 </style>
@@ -138,7 +143,7 @@ function toggleDropdown() {
 		<div class="image" style="width: 110%; opacity: 0.9;">
 			<img src="images/gallery/fulls_nature/1-sharkfront-2.jpg" alt="Angela Albi Shark Image" oncontextmenu="return false;" />
 		</div>
-	</section>
+		<video class="video-element" muted loop style="width: auto; height: auto; object-fit: contain;">
 </div>
 
 <section id="predator-prey" class="banner style5 orient-right content-align-left image-position-center onscroll-image-fade-in">
