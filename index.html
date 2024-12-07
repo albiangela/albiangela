@@ -43,11 +43,11 @@ function toggleDropdown() {
 <!-- CSS for Dropdown Menu -->
 <style>
 .dropdown {
-	position: absolute;
-	top: 20px;
-	left: 20px;
-	z-index: 1000;
-	display: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    display: block; /* Previously display: none */
 }
 
 .dropbtn {
@@ -87,14 +87,10 @@ function toggleDropdown() {
 		display: block;
 	}
 }
-@media only screen and (max-width: 767px) {
-	.video-element {
-		autoplay: false;
-	}
-}
-</style>
 
 </style>
+
+
 <!-- <button class="menu-toggle">Menu</button> -->
 <div id="mySidebar" class="sidebar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
 	<a href="#bio"><span><i class="material-icons">person</i><span class="icon-text">Bio</span></a><br>
@@ -143,7 +139,8 @@ function toggleDropdown() {
 		<div class="image" style="width: 110%; opacity: 0.9;">
 			<img src="images/gallery/fulls_nature/1-sharkfront-2.jpg" alt="Angela Albi Shark Image" oncontextmenu="return false;" />
 		</div>
-		<video class="video-element" muted loop style="width: auto; height: auto; object-fit: contain;">
+		<!-- <video class="video-element" muted loop style="width: auto; height: auto; object-fit: contain;"> -->
+		<video class="video-element" muted loop style="width: auto; height: auto; object-fit: contain;"></video>	
 </div>
 
 <section id="predator-prey" class="banner style5 orient-right content-align-left image-position-center onscroll-image-fade-in">
@@ -309,32 +306,32 @@ function toggleDropdown() {
 
 </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
 
-			<script>
-				lightbox.option({
-					'resizeDuration': 200,
-					'wrapAround': true,
-					'showDownloadLink': false
-				});
-			</script>
-			<script>
-				document.addEventListener('DOMContentLoaded', () => {
-					const menuToggle = document.getElementById('menuToggle');
-					const sidebar = document.getElementById('mySidebar');
-			
-					menuToggle.addEventListener('click', () => {
-						sidebar.classList.toggle('open');
-						menuToggle.classList.toggle('open');
-					});
-				});
-			</script>
+	<script>
+		lightbox.option({
+			'resizeDuration': 200,
+			'wrapAround': true,
+			'showDownloadLink': false
+		});
+	</script>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const menuToggle = document.getElementById('menuToggle');
+			const sidebar = document.getElementById('mySidebar');
+	
+			menuToggle.addEventListener('click', () => {
+				sidebar.classList.toggle('open');
+				menuToggle.classList.toggle('open');
+			});
+		});
+	</script>
 	</body>
 </html>
