@@ -8845,9 +8845,16 @@ img {
 /* Responsive Design for Grid Galleries */
 @media (max-width: 768px)
 {
-    .grid-gallery {
-        grid-template-columns: repeat(1, 1fr); /* Single column for smaller screens */
-    }
+	.grid-gallery {
+		grid-template-columns: repeat(1, 1fr); /* Single column for smaller screens */
+	}
+
+	.grid-gallery .caption {
+		top: 10%; /* Position caption at the top */
+		transform: translate(-50%, -10%); /* Adjust centering */
+		opacity: 1; /* Ensure caption is always visible */
+		font-size: 1.4rem; /* Adjust font size */
+	}
 }
 
 /* Ensure no margin or padding for sections */
