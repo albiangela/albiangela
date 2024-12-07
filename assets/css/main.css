@@ -8934,47 +8934,7 @@ img {
 }
 
 
-/* General Styles for Small Screens */
-@media (max-width: 768px) {
-    /* Sidebar */
-    #mySidebar {
-        position: fixed;
-        width: 0; /* Initially hidden */
-        top: 0;
-        height: 100%; /* Full height for sidebar */
-        background: #111; /* Sidebar background color */
-        z-index: 1000; /* Ensure it appears above other content */
-        overflow-x: hidden; /* Prevent horizontal scrolling */
-        transition: width 0.3s; /* Smooth width transition */
-    }
 
-    #mySidebar.open {
-        width: 250px; /* Expanded width when open */
-    }
-
-	/* Sidebar Links */
-	#mySidebar a {
-		display: block; /* Ensure links stack vertically */
-		padding: 5px; /* Minimal padding for spacing */
-		text-align: center; /* Align text in the center */
-		color: #818181; /* Text color */
-		font-size: 1rem; /* Adjust text size */
-		text-decoration: none; /* Remove underline */
-		background: none !important; /* Remove any background color */
-		border: none !important; /* Remove borders */
-		box-shadow: none !important; /* Remove any shadow effect */
-	}
-
-	/* Hover Effects */
-	#mySidebar a:hover {
-		color: #f1f1f1; /* Change text color on hover */
-		background: none !important; /* Ensure no background on hover */
-		border: none !important; /* No border on hover */
-		box-shadow: none !important; /* No shadow on hover */
-	}
-
-
-}
 
 
 
@@ -9091,6 +9051,7 @@ img {
         border: none !important; /* No border on hover */
         box-shadow: none !important; /* No shadow on hover */
     }
+
 
     /* Main Content */
     /* #bio, #predator-prey, #guppies, #gallery, #contact {
