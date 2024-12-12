@@ -30,7 +30,7 @@
 		<a href="#predator-prey"><i class="material-icons">laptop_mac</i><span class="icon-text">Research</span></a>
 		<a href="more-photos.html"><i class="material-icons">photo_camera</i><span class="icon-text">Gallery</span></a>
 		<a href="#contact"><i class="material-icons">email</i><span class="icon-text">Contact</span></a>
-		<a href="#outreach"><i class="material-icons">photo_camera</i><span class="icon-text">Outreach</span></a>
+		<a href="outreach.html"><i class="material-icons">public</i><span class="icon-text">Outreach</span></a>
 
 	</div>
 </div>
@@ -90,47 +90,39 @@ function toggleDropdown() {
 
 </style>
 
-
-<!-- <button class="menu-toggle">Menu</button> -->
-<div id="mySidebar" class="sidebar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
+<!-- Sidebar -->
+<div id="mySidebar" class="sidebar" onmouseover="openSidebar()" onmouseout="closeSidebar()">
 	<a href="#bio"><span><i class="material-icons">person</i><span class="icon-text">Bio</span></a><br>
 	<a href="#predator-prey"><i class="material-icons">laptop_mac</i><span class="icon-text">Research</span></a><br>
-    <a href="more-photos.html"><i class="material-icons">photo_camera</i><span class="icon-text">Gallery</span></a><br>
-	<a href="#contact"><i class="material-icons">email</i><span class="icon-text">Contact</span></a>
-	<a href="#outreach"><i class="material-icons">public</i><span class="icon-text">Outreach</span></a>
-	
+	<a href="more-photos.html"><i class="material-icons">photo_camera</i><span class="icon-text">Gallery</span></a><br>
+	<a href="#contact"><i class="material-icons">email</i><span class="icon-text">Contact</span></a><br>
+	<a href="outreach.html"><i class="material-icons">public</i><span class="icon-text">Outreach</span></a>
 </div>
 
 <!-- JavaScript for Sidebar Toggle -->
 <script>
-	var mini = true;
-	
-	function toggleSidebar() {
-	  if (mini) {
-		console.log("opening sidebar");
+	function openSidebar() {
 		document.getElementById("mySidebar").style.width = "250px";
-		document.getElementById("bio").style.marginLeft = "250px"; // Ensure bio is used if there is no main
-		document.getElementById("predator-prey").style.marginLeft = "250px"; // Ensure bio is used if there is no main
-		document.getElementById("guppies").style.marginLeft = "250px"; // Ensure bio is used if there is no main
-		document.getElementById("contact").style.marginLeft = "250px"; // Ensure bio is used if there is no main
-		document.getElementById("outreach").style.marginLeft = "250px"; // Ensure bio is used if there is no main
-		mini = false;
-	  } else {
-		console.log("closing sidebar");
-		document.getElementById("mySidebar").style.width = "85px";
-		document.getElementById("bio").style.marginLeft = "85px"; // Ensure bio is used if there is no main
-		document.getElementById("predator-prey").style.marginLeft = "85px"; // Ensure bio is used if there is no main
-		document.getElementById("guppies").style.marginLeft = "85px"; // Ensure bio is used if there is no main
-		document.getElementById("contact").style.marginLeft = "85px"; // Ensure bio is used if there is no main
-		document.getElementById("outreach").style.marginLeft = "85px"; // Ensure bio is used if there is no main
-		mini = true;
-	  }
+		document.getElementById("bio").style.marginLeft = "250px";
+		document.getElementById("predator-prey").style.marginLeft = "250px";
+		document.getElementById("guppies").style.marginLeft = "250px";
+		document.getElementById("contact").style.marginLeft = "250px";
+		document.getElementById("outreach").style.marginLeft = "250px";
 	}
-	</script>
+
+	function closeSidebar() {
+		document.getElementById("mySidebar").style.width = "85px";
+		document.getElementById("bio").style.marginLeft = "85px";
+		document.getElementById("predator-prey").style.marginLeft = "85px";
+		document.getElementById("guppies").style.marginLeft = "85px";
+		document.getElementById("contact").style.marginLeft = "85px";
+		document.getElementById("outreach").style.marginLeft = "85px";
+	}
+</script>
 
 <!-- Main Content -->
 <div id="bio" class="divided">
-	<section class="banner style2 orient-left content-align-left image-position-left fullscreen onscroll-content-fade-up">
+	<section class="banner style5 orient-left content-align-left image-position-left fullscreen onscroll-content-fade-up">
 		<div class="content" style="position: absolute; top: 70%; left: 20%; transform: translate(-40%, -50%); text-align: left; color: white; background: rgba(255, 255, 255, 0); padding: 40px;">
 			<h1 style="color: rgb(255, 255, 255);"><strong>Angela Albi</strong></h1>
 			<p class="major" style="text-shadow: 2px 2px 4px rgba(94, 94, 94, 0.7);"><strong>Hi! I am a post-doctoral researcher interested in fundamental principles of how and why animals move together and how their interactions shape their group behaviour.</strong> </p>
@@ -144,7 +136,6 @@ function toggleDropdown() {
 		<!-- <video class="video-element" muted loop style="width: auto; height: auto; object-fit: contain;"> -->
 		<video class="video-element" muted loop style="width: auto; height: auto; object-fit: contain;"></video>	
 </div>
-
 
 <section id="predator-prey" class="banner style5 orient-right content-align-left image-position-center onscroll-image-fade-in">
     <div class="video" style="flex: 1; max-width: 100%; height: auto; display: flex; justify-content: center; align-items: left; position: left;">
